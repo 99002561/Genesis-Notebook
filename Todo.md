@@ -1,5 +1,17 @@
 # Todo List
 1. cpp startup or work setups required
+2. Post Read of covered topics
+3. Practise examples
+4. Tasks submissions
+5. Thread and IPC Concepts
+Thread 
+Mutex
+Semophore
+deadlokcs
+Producer Consumer Problem
+concurrency in c++
+ipc techniques
+
 
 ## Todo(Oct 20)
 1. refresh move semantics, lambdas (covered topics)
