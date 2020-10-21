@@ -4,7 +4,7 @@ Genesis Program Notes
 * [Todo Tasks](Todo.md)
 
 ## C++ Programming
-* [wortSetup](C++/Setup.md)
+* [workSetup](C++/Setup.md)
 * [Notes](C++/cppNotes.md)
 * [Trivial Classes](C++/isTrivial.cpp)
 
