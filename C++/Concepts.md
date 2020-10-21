@@ -14,24 +14,24 @@
 1. Introduction
     1. Modern C++ Standards
     2. Compilers & IDEs, Toolchains
-    3. Phases of development - preprocess, compile, link, tool usage, compiler options
-    4. Sections of an object code - .text, .data, .bss, stack, heap, .rodata
+    3. Phases of development - preprocess, compile, link, tool usage, compiler options(GNU and Clang Tools)
+    4. Sections of an object code - .text, .data, .bss, stack, heap, .rodata(nm/objdumb)
 
 2. Langauge Basics
     const keyword usage on pointers & references
     const_cast, reinterpret_cast
-    Memory leaks, heap analysis
+    Memory leaks, heap analysis(Valgrind)
     Placement new operator
 
 3. Functions
     Safe & unsafe return mechanisms
     Functions returning refereces , l-value context
-    Name mangling with overloaded functions, symbol table analysis
-    extern "C" block, symbol table analysis
+    Name mangling with overloaded functions, symbol table analysis(nm/objdumb)
+    extern "C" block, symbol table analysis(nm/objdumb)
 
 4. Classs & Objects
     Object Oriented Principles
-    Object relationships - is-a, has-a/part-of, using, class diagrams, arrow types
+    Object relationships - is-a, has-a/part-of, using, class diagrams, arrow types(UMl Diagram)
     Multi file approach – best practices (header vs source, prototype vs definition)
     Clean initialization of object – initializer list with constructor (no assignment inside body)
     When do compiler provides default constructor implicitly
@@ -108,3 +108,4 @@
     5. Code Quality(Analysis -Staic(Codacy,cppcheck) and Dynamic(valgrind))
     6. CI/CD (Genics,github)
     7. Documentaion(doxygen)
+    8. Design Suite(UMl Diagram-draw.io)

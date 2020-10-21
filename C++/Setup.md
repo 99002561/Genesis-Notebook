@@ -40,3 +40,4 @@
 5. Code Quality(Analysis -Staic(Codacy,cppcheck) and Dynamic(valgrind))
 6. CI/CD (Genics,github)
 7. Documentaion(doxygen)
+8. Design Suite(UMl Diagram-draw.io)
