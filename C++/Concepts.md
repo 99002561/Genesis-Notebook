@@ -1,4 +1,4 @@
-### Advanced
+## Modern C++(Advance)
 * C++ 11/14 Language features
 * Move Semantics
 * [Trival Classes](https://www.geeksforgeeks.org/trivial-classes-c/)
@@ -8,22 +8,6 @@
 * Concurrency and IPC
 * Basic Design aspects
 
-### Development Practice
-* More focus on code quality
-
-## Basics
-
-
-Operator Overloading 
-Modular programming
-Unit Testing( Google Test )
-Code Quality - clang /astyle -Coding Standards 
-Static analysis (cpp check,valgirin)
-runtime and Linker error
-doxygen documentation generation
-data structures
-
-dynamic heap
 
 ## Basic Concepts
 
@@ -61,6 +45,8 @@ dynamic heap
     Do this keyword applicable in static, friend functions
     Returning anonymous objects, Return Value Optimization, Copy Elision 
     Use cases of static variables, static functions
+    Member Const
+    Member Type
 
 5. Operator Overloading
     Internal mechanism for Binary, Unary operators, post incr/decr
@@ -112,3 +98,13 @@ dynamic heap
     Function objects, std function objects
     Thorough understanding of std::string class members
     Implement own container, iterators, function objects
+
+11. C++ Development Tools
+    0. IDE or Compiler with Editor
+    1. Unit Testing Framework
+    2. Code Style Plugin(Clang or Google)
+    3. [Code Visualizer](http://www.pythontutor.com/cpp.html#mode=edit)
+    4. Code Explorer(SourceTrail)
+    5. Code Quality(Analysis -Staic(Codacy,cppcheck) and Dynamic(valgrind))
+    6. CI/CD (Genics,github)
+    7. Documentaion(doxygen)

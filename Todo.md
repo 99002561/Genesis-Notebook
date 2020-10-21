@@ -1,9 +1,7 @@
 # Todo List
-
 1. Threads and IPC pre read
-2. Intermediate C++
-    - Checklist
-3. Advanced C++
+2. Study of Core C++
+3. Study of Advanced C++
     - Part1
     - Part2
     - Coding Tasks
@@ -40,9 +38,4 @@ Further:-
     smart pointers
 5. vs setup for code style,visulaization and analysis
 
-## Studylist
-* Class
-    * Member Const
-    * Member Type
-* Templates
 
