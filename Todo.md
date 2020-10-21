@@ -1,12 +1,12 @@
 # Todo List
-1. Threads and IPC pre read
-2. Study of Core C++
-3. Study of Advanced C++
+1. Threads and IPC pre read(unit tom-9:30)
+2. Study of Core C++ (22nd)
+3. Study of Advanced C++(23rd)
     - Part1
     - Part2
     - Coding Tasks
     - Project Implementation
-4. SDLC 
+4. SDLC (22)
 
 ## Oct 21
 Activities:-
