@@ -1,19 +1,32 @@
 # Todo List
-1. cpp startup or work setups required
-2. Post Read of covered topics
-3. Practise examples
-4. Tasks submissions
-5. Thread and IPC Concepts
-Thread 
-Mutex
-Semophore
-deadlokcs
-Producer Consumer Problem
-concurrency in c++
-ipc techniques
+
+1. Threads and IPC pre read
+2. Intermediate C++
+    - Checklist
+3. Advanced C++
+    - Part1
+    - Part2
+    - Coding Tasks
+    - Project Implementation
+4. SDLC 
+
+## Oct 21
+Activities:-
+* post read of covered topics + practice examples
+* continue coding tasks
+* refresh thread & ipc concepts (linux os, posix apis)
+	* threads
+	* mutex
+	* semaphore
+	* producer consumer problem
+	* deadlocks
+Further:-
+* concurrency in C++ ==> std::thread, std::async
+* IPC techniques  ==> std::mutex, some locks, std::condition_variable etc.
+* std::future, std::promise (if time permits
 
 
-## Todo(Oct 20)
+## Oct 20
 1. refresh move semantics, lambdas (covered topics)
     * check for the trvial and non trivial classes
     * Check copy constrcutor for trivial and non trivial casses
@@ -26,4 +39,10 @@ ipc techniques
     some topics on templates
     smart pointers
 5. vs setup for code style,visulaization and analysis
+
+## Studylist
+* Class
+    * Member Const
+    * Member Type
+* Templates
 
