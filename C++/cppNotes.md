@@ -3,17 +3,22 @@
 ## Basics
 [std](https://www.geeksforgeeks.org/using-namespace-std-considered-bad-practice/)
 
+### Namespace
+Namespaces were introduced into C++ to resolve identifier name conflicts.
+This ensured that two objects can have the same name and yet be treated differently if they belonged to different namespaces. 
+
 ### Alias Names
 1. typedef <existingName> <NewName>
     * typedef 
     * alias names for type
     * done by compiler
+[typedef](https://www.studytonight.com/c/typedef.php)
 
 2. #define <newName> <existingName>
     * done by preprocessor directive
     * alias name for both values and types
 
-[typedef](https://www.studytonight.com/c/typedef.php)
+
 
  
 ## Classes
