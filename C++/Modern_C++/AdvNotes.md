@@ -1,17 +1,24 @@
-## Notes
+
+
+
+## Trivial Classes in C++
+
+* has compiler provided special member functions
+* contiguous memory area occupied
+* 
 
 1. Type of Objects
-    * Trvial and Non Trivial Objects
+    * Trivial and Non Trivial Objects
     Trivial Copy constructor is given by the compiler
 
-2. Move Schematics(Move Constr)
-    * In Scenario the dublicate heap blocks are created
+## Move Schematics(Move Constr)
+    * In Scenario the duplicate heap blocks are created
     * best convention is to transfer the heap block
     *   move assignment is done for the Temp objects and Named objects by type casting
     *   perfect forwarding
     *   to call l-value and r-value dedicated
 
-3. Lamdas 
+## Lamdas 
     * used to write temporary function
     * Lambdas for effective callback mechanism, without the need for defining named functions inadvance
 
@@ -34,3 +41,5 @@
     });
     }
 
+## Threads
+* Support from C++11 standard

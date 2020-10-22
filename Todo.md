@@ -8,6 +8,10 @@
     - Project Implementation
 4. SDLC (22)
 
+## Oct 22
+1. Tuple
+2. Regular Expression
+
 ## Oct 21
 Activities:-
 * post read of covered topics + practice examples
@@ -26,7 +30,7 @@ Further:-
 
 ## Oct 20
 1. refresh move semantics, lambdas (covered topics)
-    * check for the trvial and non trivial classes
+    * check for the trivial and non trivial classes
     * Check copy constrcutor for trivial and non trivial casses
     * Algorithms and Lamda(https://en.cppreference.com/w/cpp/algorithm)
     * Apply all this concepts  

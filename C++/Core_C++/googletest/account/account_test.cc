@@ -43,4 +43,9 @@ TEST(Account,TransactionTest) {
     a1.credit(3000);
     EXPECT_EQ(8200.0,a1.getBalance()) << "Invalid Balance";
 }
+} // NameSpace end
+
+ int main(int argc, char **argv) {
+    testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
 }
