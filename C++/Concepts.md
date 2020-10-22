@@ -9,7 +9,7 @@
 * Basic Design aspects
 
 
-## Basic Concepts
+## [Core C++ Concepts](Core_C++)
 
 1. Introduction
     1. Modern C++ Standards
@@ -98,6 +98,7 @@
     Function objects, std function objects
     Thorough understanding of std::string class members
     Implement own container, iterators, function objects
+    Hash Table
 
 11. C++ Development Tools
     0. IDE or Compiler with Editor

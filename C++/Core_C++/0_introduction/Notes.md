@@ -55,7 +55,7 @@
 
 ## Memory layout of a loaded process
 * Code segment (.text)
-* Intialized Data Segment (.data)
+* Initialized Data Segment (.data)
 * Uninitialized Data Segment (.bss)
 * Stack
 * Heap Association

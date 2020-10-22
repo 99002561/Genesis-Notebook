@@ -39,3 +39,25 @@ Further:-
 5. vs setup for code style,visulaization and analysis
 
 
+## Study List
+
+* function pointer
+* heap block
+* return value optimization
+
+2. Linux
+* Process and Threads
+* Scheduling
+
+3. SDLC
+* V Model
+* Agile Model
+* Software Testing
+* Boundary Conditons
+
+4. Python
+* Unit Testing
+
+5. Medical Devices
+* Regulations and Design Control
+    https://www.iso.org/obp/ui/#iso:std:iso:13485:ed-3:v1:en
