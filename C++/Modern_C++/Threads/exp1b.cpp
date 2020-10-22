@@ -1,5 +1,6 @@
-// __Example 2__Basic2 with for loop
-//g++ exp2.cpp -lpthread && ./a.out
+/* __Example 1__Basis Threads with Lambda
+g++ exp1b.cpp -lpthread && ./a.out
+*/
 
 
 
@@ -7,20 +8,13 @@
 #include <thread>
 
 #define print(msg) std::cout << msg << std::endl
-constexpr int max =5; 
 
 void fsample(){
     print("Thread A"); 
-    for(int i=0;i<=max;i++){
-      print(i);   
-    }
 }
 
 void gcompute(){
     print("Thread B");
-    for(int i=0;i<=max;i++){
-      print(i);   
-    }
 }
 
 
@@ -28,29 +22,21 @@ int main(){
     print("Main-- Welcome");
     std::thread t1(fsample);    // Created Thread1 for fsample
     std::thread t2(gcompute); // 2nd Parallel Thread
-    t1.join();
-    t2.join();
+    std::thread t3([] (){std::cout<<"lambda function"<<"\n";});
+    t1.join();      //Main Thread waits until t1 and t2 finishes
+    t2.join(); 
+    t3.join();  
     print("Thankyou");
     return 0;
 
 }
-/*Output
+
+/* Output
 
 Main-- Welcome
 Thread A
-0
-1
-2
-3
-4
-5
 Thread B
-0
-1
-2
-3
-4
-5
+lambda function
 Thankyou
 
 */

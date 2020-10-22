@@ -7,31 +7,26 @@
 #include <iostream>
 #include <thread>
 #include <string>
-#include <mutex>
+#include <atomic>
 
 #define print(msg) std::cout << msg << std::endl
 #define str(x) std::to_string(x)
-constexpr int max =10000; 
 
-int val = 100;   // Shared Resource for both the threads
-std::mutex m1;    // Declared Globally
+constexpr int max =10; 
+std:: atomic<int> val;
 
 void inc(){
     print("Thread Increase");
-    m1.lock();                 // Critical Section
     for(int i=0;i<=max;i++){
       val++;   
     }
-    m1.unlock();   //Unlock to for other threads
 }
 
 void dec(){
     print("Thread Decrease");
-    m1.lock();  
     for(int i=0;i<=max;i++){
      val--;  
     }
-    m1.unlock();
 }
 
 int main(){
@@ -43,5 +38,4 @@ int main(){
     print("Final Val:"+str(val));
     print("End");
     return 0;
-
 }

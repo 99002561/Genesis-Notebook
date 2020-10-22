@@ -1,4 +1,4 @@
-// __Example 2__Basic2
+// __Problem 1__Race Condition
 // g++ pb1.cpp -lpthread && ./a.out
 
 #include <iostream>
@@ -42,6 +42,31 @@ Output :
 This is Race Condition problem(uncertain results)
 value of val variable is not same for every time of the program execution
 
+user@BLRMIESPC-1009:~/Documents/Notebook/C++/Modern_C++/Threads$ g++ pb1.cpp -lpthread && ./a.out
+Main-- Welcome
+Thread Increase
+Thread Decrease
+Final Val:-2480
+End
+user@BLRMIESPC-1009:~/Documents/Notebook/C++/Modern_C++/Threads$ g++ pb1.cpp -lpthread && ./a.out
+Main-- Welcome
+Thread Increase
+Thread Decrease
+Final Val:100
+End
+user@BLRMIESPC-1009:~/Documents/Notebook/C++/Modern_C++/Threads$ g++ pb1.cpp -lpthread && ./a.out
+Main-- Welcome
+Thread Increase
+Thread Decrease
+Final Val:-2417
+End
+user@BLRMIESPC-1009:~/Documents/Notebook/C++/Modern_C++/Threads$ g++ pb1.cpp -lpthread && ./a.out
+Main-- Welcome
+Thread Increase
+Thread Decrease
+Final Val:-3421
+End
+
 * Not feasible Solutions
   Bus lock
   Disabling Threads
@@ -49,5 +74,9 @@ value of val variable is not same for every time of the program execution
 * Feasible Solutions
   1. Mutex or Semaphore
   2. using atomic variable
+
+
+
+
 
 */

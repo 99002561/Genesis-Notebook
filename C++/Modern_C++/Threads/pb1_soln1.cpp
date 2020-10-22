@@ -49,3 +49,13 @@ int main(){
     return 0;
 
 }
+
+/* output- Val same for each iteration output
+
+Main-- Welcome
+Thread Increase
+Thread Decrease
+Final Val:100
+End
+
+*/

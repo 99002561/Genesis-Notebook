@@ -22,13 +22,23 @@ void gcompute(){
     print("Thread B");
 }
 
+
 int main(){
     print("Main-- Welcome");
     std::thread t1(fsample);    // Created Thread1 for fsample
     std::thread t2(gcompute); // 2nd Parallel Thread
-    t1.join();      //Main Thread waits untill t1 and t2 finishes
+    t1.join();      //Main Thread waits until t1 and t2 finishes
     t2.join();   
     print("Thankyou");
     return 0;
 
 }
+
+/* Output
+
+Main-- Welcome
+Thread A
+Thread B
+Thankyou
+
+*/

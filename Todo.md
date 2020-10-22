@@ -11,12 +11,10 @@
 ## Oct 22
 1. Tuple
 2. Regular Expression
-* Threads examples(5)
     Bind
     lambda
     Placeholder
-4. Parallel sum of Large array
-5. pb1 solution example
+3. Atomic Variable
 6. Prevent Loop overlap using mutex(exp 9)
 7. Unique Lock,Lock_guard and unique guard(exp 10a,b)
 8. exp(11)
