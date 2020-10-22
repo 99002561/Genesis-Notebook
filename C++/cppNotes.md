@@ -4,8 +4,27 @@
 [std](https://www.geeksforgeeks.org/using-namespace-std-considered-bad-practice/)
 
 ### Namespace
-Namespaces were introduced into C++ to resolve identifier name conflicts.
-This ensured that two objects can have the same name and yet be treated differently if they belonged to different namespaces. 
+* Namespaces were introduced into C++ to resolve identifier name conflicts.
+* This ensured that two objects can have the same name and yet be treated differently if they belonged to different namespaces. 
+* Namespace declarations appear only at global scope. 
+    namespace <name>{
+        int z;
+    }
+    name::z
+* Members inside the unnamed namespace can only be accessed in same file.  
+* Unnamed namespace limits access of class, variables, function and objects to the file which it is defined.  
+* Functionality is similar to static keyword. Static variables limits the access of global variable and functions to the file in which they are defined. 
+* Difference between unnamed namespace and static keyword is that static keyword can be used with variable, function and objects but not with user defined class. 
+
+### using
+    Using keyword is used to: 
+    a. Bring a specific member from the namespace into the current scope. 
+    b. Bring all members from the namespace into the current scope. 
+    c. Bring a base class method or variable into the current class scope. 
+
+    using std::cout     --> gets cout of std namespace to current scope
+    using namespace std --> gets all the type and class declaration in the std namescope
+
 
 ### Alias Names
 1. typedef <existingName> <NewName>
