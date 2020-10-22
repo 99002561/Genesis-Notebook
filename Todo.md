@@ -1,4 +1,5 @@
 # Todo List
+* Oct 22
 * Study of Core C++ (22nd)
 * Study of Advanced C++(23rd)
     - Part1
@@ -11,12 +12,42 @@
 1. Tuple
 2. Regular Expression
 * Threads examples(5)
-Bind
-lambda
-Placeholder
+    Bind
+    lambda
+    Placeholder
 4. Parallel sum of Large array
 5. pb1 solution example
-6. Deadlock
+6. Prevent Loop overlap using mutex(exp 9)
+7. Unique Lock,Lock_guard and unique guard(exp 10a,b)
+8. exp(11)
+    Deadlock Scenario 1(2 Shared Resources)
+    std::mutex m1;
+    std::mutex m2;
+
+    T1                  T2   
+    m1.lock()           m2.lock
+    delay()             m1.lock
+    m2.lock()                   
+
+    Solution:
+    std::unique_lock<std::mutex> u1(m1,std::def_lock)  //Global
+    std::unique_lock<std::mutex> u2(m2,std::def_lock)
+    std::lock(u1,u2)
+9. Pre Read
+    std::condition_variables
+    std::async
+    std::future
+    std::promise
+
+Activity:-
+* Post read of covered topics (thread, mutex, locks etc)
+* Pre-read of next topic
+* Coding Tasks
+* File Handling, Namespaces (if pending)
+* Exception Handling, give a try
+
+* Vine Re
+
 
 ## Oct 21
 Activities:-

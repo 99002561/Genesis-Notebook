@@ -35,11 +35,9 @@
     * Techniques
         * Semophores(no c++ support)
             For Multiple Shared Resource Access
-
+        * Spinlocks(no c++ suppport)
         * Mutex
             for single Shared resources between the threads
-
-        * Spinlocks(no c++ suppport)
         * Atomic Variables(c++)
             Other Threads cant access this variable if this is used by one thread
 

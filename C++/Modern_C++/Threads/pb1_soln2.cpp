@@ -1,28 +1,37 @@
-// __Example 2__Basic2
-// g++ pb1.cpp -lpthread && ./a.out
+/* __Problem1 Solution__Atomic Variable
 
+ std::atomic<int> val(100)
+ g++ pb1_soln2.cpp -lpthread && ./a.out
+
+*/
 #include <iostream>
 #include <thread>
 #include <string>
+#include <mutex>
 
 #define print(msg) std::cout << msg << std::endl
 #define str(x) std::to_string(x)
 constexpr int max =10000; 
 
 int val = 100;   // Shared Resource for both the threads
+std::mutex m1;    // Declared Globally
 
 void inc(){
-    print("Thread Increase"); 
+    print("Thread Increase");
+    m1.lock();                 // Critical Section
     for(int i=0;i<=max;i++){
       val++;   
     }
+    m1.unlock();   //Unlock to for other threads
 }
 
 void dec(){
     print("Thread Decrease");
+    m1.lock();  
     for(int i=0;i<=max;i++){
      val--;  
     }
+    m1.unlock();
 }
 
 int main(){
@@ -36,18 +45,3 @@ int main(){
     return 0;
 
 }
-
-/*
-Output :
-This is Race Condition problem(uncertain results)
-value of val variable is not same for every time of the program execution
-
-* Not feasible Solutions
-  Bus lock
-  Disabling Threads
-
-* Feasible Solutions
-  1. Mutex or Semaphore
-  2. using atomic variable
-
-*/

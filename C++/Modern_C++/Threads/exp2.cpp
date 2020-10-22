@@ -1,4 +1,8 @@
-// __Example 2__Basic2
+
+g++ thread.cpp -lpthread && ./a.out
+// __Example 2__Basic2 with for loop
+
+
 #include <iostream>
 #include <thread>
 

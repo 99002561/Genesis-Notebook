@@ -1,5 +1,12 @@
-// __Problem1 Solution __Basic2
-// g++ pb1_soln1.cpp -lpthread && ./a.out
+/* __Problem1 Solution__Mutex
+
+  std::mutex m1  // Declared Globally
+  m1.lock()
+  m2.unlock()
+
+ g++ pb1_soln1.cpp -lpthread && ./a.out
+
+*/
 
 #include <iostream>
 #include <thread>
@@ -19,7 +26,7 @@ void inc(){
     for(int i=0;i<=max;i++){
       val++;   
     }
- //   m1.unlock();
+    m1.unlock();   //Unlock to for other threads
 }
 
 void dec(){
@@ -42,22 +49,3 @@ int main(){
     return 0;
 
 }
-
-/*
-Output :
-This is Race Condition problem(uncertain results)
-value of val variable is not same for every time of the program execution
-
-* Not feasible Solutions
-  Bus lock
-  Disabling Threads
-
-* Solution 1(Mutex or Semophore)
-  
- 
-  m2.unlock()
-
-* Solution 2(using atomic variable)
-  std::atomic<int> val(100)
-
-*/

@@ -1,12 +1,13 @@
-/* __Basis Threads__
+/* __Example 1__Basis Threads(Task Driven Threads)
 1. Create Thread Handler(Declaration)
-2. Syncronise Threads(by Join)
+2. Join Threads to main Threads(to wait until threads finish)
 
-g++ thread.cpp -lpthread && ./a.out
+cd Notebook/C++/Modern_C++/Threads
+g++ exp1.cpp -lpthread && ./a.out
 
 */
 
-// __Example 1__ Task Driven Thread
+
 
 #include <iostream>
 #include <thread>
@@ -25,8 +26,8 @@ int main(){
     print("Main-- Welcome");
     std::thread t1(fsample);    // Created Thread1 for fsample
     std::thread t2(gcompute); // 2nd Parallel Thread
-    t1.join();
-    t2.join();   // Thread Sync
+    t1.join();      //Main Thread waits untill t1 and t2 finishes
+    t2.join();   
     print("Thankyou");
     return 0;
 
