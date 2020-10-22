@@ -1,20 +1,28 @@
 # Todo List
-1. Threads and IPC pre read(8:30 to 9:30)
-2. Study of Core C++ (22nd)
-3. Study of Advanced C++(23rd)
+* Study of Core C++ (22nd)
+* Study of Advanced C++(23rd)
     - Part1
     - Part2
     - Coding Tasks 
     - Project Implementation
-4. SDLC (22)
+* SDLC (22)
 
 ## Oct 22
 1. Tuple
 2. Regular Expression
+* Threads examples(5)
+Bind
+lambda
+Placeholder
+4. Parallel sum of Large array
+5. pb1 solution example
+6. Deadlock
 
 ## Oct 21
 Activities:-
 * post read of covered topics + practice examples
+    - Smart Pointers
+    - Universal Pointers
 * continue coding tasks
 * refresh thread & ipc concepts (linux os, posix apis)
 	* threads
@@ -31,8 +39,8 @@ Further:-
 ## Oct 20
 1. refresh move semantics, lambdas (covered topics)
     * check for the trivial and non trivial classes
-    * Check copy constrcutor for trivial and non trivial casses
-    * Algorithms and Lamda(https://en.cppreference.com/w/cpp/algorithm)
+    * Check copy constructor for trivial and non trivial classes
+    * Algorithms and Lambda(https://en.cppreference.com/w/cpp/algorithm)
     * Apply all this concepts  
 2. explore STL algorithms, apply in coding tasks with lambdas
 3. self study (try) -- file handling -- ofstream, ifstream
@@ -40,12 +48,12 @@ Further:-
     std::bind
     some topics on templates
     smart pointers
-5. vs setup for code style,visulaization and analysis
+5. vs setup for code style,visualization and analysis
 
 
 ## Study List
 
-* function pointer
+* function pointer and all pointers
 * heap block
 * return value optimization
 
@@ -57,7 +65,7 @@ Further:-
 * V Model
 * Agile Model
 * Software Testing
-* Boundary Conditons
+* Boundary Conditions
 
 4. Python
 * Unit Testing
@@ -65,3 +73,8 @@ Further:-
 5. Medical Devices
 * Regulations and Design Control
     https://www.iso.org/obp/ui/#iso:std:iso:13485:ed-3:v1:en
+
+## Project List
+1. C++(MoneyWallet)
+2. Linux
+3. Pyhton

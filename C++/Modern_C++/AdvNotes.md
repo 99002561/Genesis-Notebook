@@ -1,6 +1,3 @@
-
-
-
 ## Trivial Classes in C++
 
 * has compiler provided special member functions
@@ -40,6 +37,3 @@
                         return r1.getBalance() < r2.getBalance();
     });
     }
-
-## Threads
-* Support from C++11 standard
