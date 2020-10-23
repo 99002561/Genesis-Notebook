@@ -1,12 +1,12 @@
 /* __example of synchronization__
 
-Observe Producer and Consumer threads are not in sync
-ie. Consumer is starting before the Producer is started
-
 Soln:
 * Condition Variable is used
 * consumer thread should wait until it gets control from the producer thread
-  
+
+Conditon variable wait
+std::unique_lock<std::mutex> lck(m1);
+cv.wait(lck,getStatus);
 
 g++ pb3_soln.cpp -lpthread && ./a.out
 */

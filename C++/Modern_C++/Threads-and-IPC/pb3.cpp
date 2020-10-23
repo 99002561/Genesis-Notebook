@@ -74,4 +74,8 @@ P--5
 End
 
 
+Soln:
+* Condition Variable is used
+* consumer thread should wait until it gets control from the producer thread
+
 */
