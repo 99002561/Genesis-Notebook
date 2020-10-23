@@ -12,8 +12,8 @@
 #define print(msg) std::cout << msg << std::endl
 #define str(x) std::to_string(x)
 
-constexpr int max =10; 
-std:: atomic<int> val;
+constexpr int max =100; 
+std:: atomic<int> val(10);
 
 void inc(){
     print("Thread Increase");
@@ -39,3 +39,13 @@ int main(){
     print("End");
     return 0;
 }
+
+/* Output
+
+Main-- Welcome
+Thread Increase
+Thread Decrease
+Final Val:10
+End
+
+*/

@@ -27,7 +27,7 @@
     when Changes applied from multiple threads at the same time leads to race condition which effects in uncertain results
 
 * Critical Section
-    A section where it alters or uses the shared resources 
+    A program segment where it alters or uses the shared resources 
     * Entry Section - Allows/Blocks the Other threads
     * Exit Section
 
@@ -45,3 +45,17 @@
 * Signaling and Synchronization
     * Semaphores
     * Condition Variable
+
+* Dead lock   
+here if the T2 tries to lock resources that are later used by 
+
+    Difference between the lock_guard and unique lock
+    unique lock
+
+
+## Condition Variable
+* Co-ordinate the Communication between the inter threads if there is any condition needs to be satisfied
+
+## std::async
+* to create threads for function and get back the results to the main function
+* Launch async

@@ -1,3 +1,6 @@
+## Linked 
+
+
 ## Trivial Classes in C++
 
 * has compiler provided special member functions

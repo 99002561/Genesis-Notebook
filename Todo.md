@@ -8,6 +8,14 @@
     - Project Implementation
 * SDLC (22)
 
+## Ocr 23
+* linked list examples
+* Mutual exclusion
+* Synchronization
+* Condition Variable (exp11,exp12)
+* ranged for loop
+* async
+
 ## Oct 22
 1. Tuple
 2. Regular Expression
@@ -28,9 +36,11 @@
     m2.lock()                   
 
     Solution:
+    * using diff_lock and atomic lock
     std::unique_lock<std::mutex> u1(m1,std::def_lock)  //Global
     std::unique_lock<std::mutex> u2(m2,std::def_lock)
     std::lock(u1,u2)
+
 9. Pre Read
     std::condition_variables
     std::async
