@@ -30,8 +30,9 @@
 * [myAtomic class](myAtom.cpp)
 
 ## Synchronization(Condition Variable)
-* [producer and consumer][pb3.cpp]  - exp(11,12)
-* [Stack Class with Condition Variable](exp14c.cpp)
-
-
+* [producer and consumer problem](pb3.cpp)
+* [producer and consumer solution](pb3_soln.cpp)
+* [Stack class overflow and underflow problem](pb4.cpp)
+* [Stack Class(no underflow result)](pb4a_soln.cpp)
+* [Stack Class(no overflow result)](pb4b_soln.cpp)
 

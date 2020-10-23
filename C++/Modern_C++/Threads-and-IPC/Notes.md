@@ -77,6 +77,19 @@ here if the T2 tries to lock resources that are later used by
 
 ## Condition Variable
 * Co-ordinate the Communication between the inter threads if there is any condition needs to be satisfied
+* it blocks other thread makes it to wait untill condition is achived
+
+* it uses unique lock over mutex
+
+Mater Thread
+cv.notify_one();
+
+std::unique_lock<std::mutex> lck(m1);
+cv.wait(lck,conditionfn_ptr/lambdaFunction);
+
+
+
+http://www.cplusplus.com/reference/condition_variable/condition_variable/
 
 
 ## Function binding

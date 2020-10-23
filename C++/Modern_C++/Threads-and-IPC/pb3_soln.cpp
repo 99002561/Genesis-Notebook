@@ -1,15 +1,21 @@
-/* __example Problem of synchronization__
+/* __example of synchronization__
 
 Observe Producer and Consumer threads are not in sync
 ie. Consumer is starting before the Producer is started
 
-g++ pb3.cpp -lpthread && ./a.out
+Soln:
+* Condition Variable is used
+* consumer thread should wait until it gets control from the producer thread
+  
+
+g++ pb3_soln.cpp -lpthread && ./a.out
 */
 
 #include <iostream>
 #include <thread>
 #include <string>
 #include <mutex>
+#include <condition_variable>
 
 std::chrono::microseconds delay(1000);
 constexpr int max =5; 
@@ -21,26 +27,43 @@ constexpr int max =5;
 int val = 5;   // Shared Resource for both the threads
 std::mutex m1;    // Declared Globally
 
+std::condition_variable cv;
+bool ready = false;
+
+bool getStatus(){
+    return ready;
+}
+
+
 void producer(){
     print("Thread Producer"); 
     threadSleep; 
-    m1.lock();                    // Locking Loop      
+    // Creating Unique Lock 
+    std::unique_lock<std::mutex> lck(m1);
+
     for(int i=0;i<=max;i++){
     print("P--"+str(++val)) ;        // Critical part   
     threadSleep;      
     }
-    m1.unlock();                  //Unlock to for other threads
+    ready = true;
+    cv.notify_one();
+    print("Producer Thread - Thanks");
 }
 
 void consumer(){
     print("Thread Consumer");
-    m1.lock(); 
+    std::unique_lock<std::mutex> lck(m1);
+   // cv.wait(lck,[] (){return ready;});   // waits untill ready is false
+    
+    cv.wait(lck,getStatus);
+    print("Thread Consumer--start");    // runs when ready is true
     for(int i=0;i<=max;i++){
     print("C--"+str(val--)) ;  
     threadSleep; 
     }
-    m1.unlock();
+    
 }
+
 
 int main(){
     print("Main-- Welcome");
@@ -49,7 +72,7 @@ int main(){
     t1.join();
     t2.join();
    // print("Final Val:"+str(val));
-    print("End");
+    print("Main--End");
     return 0;
 
 }

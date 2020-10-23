@@ -12,10 +12,6 @@
 
 ## Ocr 23
 * File Name Change
-* Condition Variable (exp11,exp12)
-* Producer and Consumer Sequential Problem(exp11) - pb3
-* Producer Consumer Solution(exp12)
-* Atomic variable(exp11)
 * Thread Notes Refactoring
 * Self Study/Additional:-
     * get_id from std::thread
@@ -29,6 +25,7 @@
     * exception handling
     * revise all concepts
     * what is async threads use
+    * explicit for no asssignment
 * Threads Assignment
 * Lambda Implementation for Threads
 
