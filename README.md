@@ -15,6 +15,23 @@ Genesis Program Notes
 * [Git Commands](Github/Commands.md)
 * [Git Actions](Github/Actions.md)
 
+# Linux Programming
+* [Study Topics](Linux/Topics.md)
+* [C++ Installations](Linux/c++_Installations.md)
+* [Basic of Commands](Linux/Commands/README.md)
+* [Development Tools](Linux/DevelopmentTools/README.md)
+* [OS Concepts](Linux/OS_Concpets/)
+* [Shell_Scripting](Linux/Shell_Scripting/)
 
-## Others
-* [References](./References/)
+# Python 
+* [Study Topics](Python/Topics.md)
+* [StartUp Guide](Python/StartUp.md)
+* [Basics](Python/Basics.md)
+* [Classes](Python/Class/README.md)
+* [Screenshots](Python/Pictures/)
+
+# Medical Devices
+* [Medical Demo](Medical_Demo/README.md)
+
+# Applied Software Development lifeCycle
+* [Notes](SDLC/Notes.md)
