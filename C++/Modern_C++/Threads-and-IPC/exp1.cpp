@@ -1,5 +1,6 @@
 /* __Example 1__Basis Threads(Task Driven Threads)
-1. Create Thread Handler(Declaration)
+
+1. Create Thread Handler(Declaration) for a function
 2. Join Threads to main Threads(to wait until threads finish)
 
 cd Notebook/C++/Modern_C++/Threads

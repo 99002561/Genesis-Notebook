@@ -8,21 +8,38 @@
 * Shared Resources
 * Concurrency Executions
     All the threads can run simultaneously
+
 * Applications
     * Multiple Activity in YouTube,Browser
     * Multiple Client Handling(Main Thread listening to clients)
+
 * Categories Achieved:
     Task Driven Parallelism(Cookie functions are different,Data may or mayn't be same)
     Data Driven Parallelism(Cookie function is same,Data is Changed)
         Eg. Parallel Sum of large Array
+
 * Constructor Accepts
     * Normal Functions
     * Lambda Expressions
-    * Binded Functions
     * Function ObjectS
+        * using lambda with capture [] () { s1.push(val) }
+        * For non static class member
+            * Create object pointer - Class * objPtr = obj Class();
+            * Thread Arguments - Pass member address ,object pointer and member arguments
+                eg. std::thread t1(&Class::member,objPtr,memberArg);       
+        * for static class member
+            std::thread th(&class::member,arg);
+    * Binded Functions
+        std::thread t1(std::bind(fn,arg))
+        std::thread t1(std::bind(&class::member,objPtr,2));
+        
 * Threads are scheduled by OS default
     std::thread
+        for running thread without return
     std::async
+        for running thread with return value to a main thread
+        std::promise
+        for intermediate return from the thread
 
 ### IPC 
 * Race Condition
@@ -63,10 +80,5 @@ here if the T2 tries to lock resources that are later used by
 
 
 ## Function binding
-* simple function binding
-   compute(arg){}
-   std::bind(compute,arg)
 
-* Call member binding
-  std::bind(&Class::objMember, obj, arg)
-  std::bind(&Stack::push, s1, val)
+

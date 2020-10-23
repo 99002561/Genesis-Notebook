@@ -11,11 +11,11 @@
 * SDLC (22)
 
 ## Ocr 23
-* Class Thread(Stack example 2-14)
+* File Name Change
 * Condition Variable (exp11,exp12)
-* Atomic variable(exp11)
 * Producer and Consumer Sequential Problem(exp11) - pb3
 * Producer Consumer Solution(exp12)
+* Atomic variable(exp11)
 * Thread Notes Refactoring
 * Self Study/Additional:-
     * get_id from std::thread
@@ -28,7 +28,9 @@
     * Launch async
     * exception handling
     * revise all concepts
+    * what is async threads use
 * Threads Assignment
+* Lambda Implementation for Threads
 
 ## Oct 22
 * Unique Lock and unique guard/Lock Guard(10a,10b)

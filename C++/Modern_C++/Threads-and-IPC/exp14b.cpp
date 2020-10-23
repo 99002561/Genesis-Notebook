@@ -5,10 +5,6 @@
 * Features:
   * Mutual Exclusion(Mutex) - to avoid race condition,
   * parallel push and push using threads
-*Implementation:
-  1. std::bind(&Stack::push, s1, val)
-  2. [] () { s1.push(val) }
-  3. std::thread()    //similar for bind syntax
 
 g++ exp14b.cpp -lpthread && ./a.out
 
@@ -18,6 +14,7 @@ g++ exp14b.cpp -lpthread && ./a.out
 #include <mutex>
 #include <functional>
 #include <thread>
+#include <future>
 
 #define print(msg) std::cout << msg << std::endl
 #define str(i) std::to_string(i)
@@ -42,7 +39,7 @@ class Stack {
   void push(int val) {
     print("Thread-1");
     m1.lock();
-    std::cout<< "push: " << val << std::endl; 
+    std::cout<< "Push: " << val << std::endl; 
     m_arr[++m_ptr]=val;
     m1.unlock();
   } 
@@ -51,7 +48,6 @@ class Stack {
     print("Thread-2");
     m1.lock();
     int val=m_arr[m_ptr--];
-    std::cout<< "pop: " << val << std::endl; 
     m1.unlock();
     return val;
   }
@@ -65,17 +61,16 @@ int main(){
   print("Main");
 
   Stack s1(2);
+  Stack *stackPtr = &s1;
 
-  // std::thread t1(std::bind(&Stack::push, s1, 2));
-  // std::thread t1(funct,2);   // will not work
-
-  std::thread t1([=] () { return s1.push; });
-  //std::thread t2(s1.pop());
+  //std::thread t1(&Stack::push,stackPtr,2);
+  std::thread t1(std::bind(&Stack::push,stackPtr,2));
   
-
+  std::future<int> result = std::async(&Stack::pop,stackPtr);
+  //std::thread t2(&Stack::pop,stackPtr);
   
-    t1.join();
- // t2.join();
+  t1.join();
+  print("pop: "+str(result.get()));
 
   print("Main end");
 

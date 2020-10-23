@@ -1,5 +1,6 @@
-/* __example 15__Call function asynchronously
+/* __example 15__
 
+* Call function asynchronously for returning value to main thread
 * future header
   fn(args){}
   std::async(fn,args)
