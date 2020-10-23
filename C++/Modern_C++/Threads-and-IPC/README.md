@@ -23,7 +23,7 @@
 * [Mutex Solution for Pb1](pb1_soln1.cpp)
 * [Atom Variable Solution for Pb1](pb1_soln2.cpp)
 * [Preventing Loop Overlap using Mutex](pb1_soln3.cpp)
-* [Dead Lock](pb2.cpp)
+* [Dead Lock Problem](pb2.cpp)
 * [lockGuard](exp10a.cpp)
 * [uniqueGuard](exp10b.cpp)
 * [Stack Class with Mutex](exp14b.cpp)
