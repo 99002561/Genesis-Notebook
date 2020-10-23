@@ -1,5 +1,7 @@
 # Todo List
+* Oct 23
 * Oct 22
+* Threads Assignments (tomorrow evening) 
 * Study of Core C++ (22nd)
 * Study of Advanced C++(23rd)
     - Part1
@@ -9,43 +11,34 @@
 * SDLC (22)
 
 ## Ocr 23
-* linked list examples
-* Mutual exclusion
-* Synchronization
+* Class Thread(Stack example 2-14)
 * Condition Variable (exp11,exp12)
-* ranged for loop
-* async
+* Atomic variable(exp11)
+* Producer and Consumer Sequential Problem(exp11) - pb3
+* Producer Consumer Solution(exp12)
+* Thread Notes Refactoring
+* Self Study/Additional:-
+    * get_id from std::thread
+    * Detachable Threads
+    * std::launch::async vs  std::launch::deferred
+    * linked list examples
+    * Mutual exclusion
+    * Synchronization
+    * ranged for loop
+    * Launch async
+    * exception handling
+    * revise all concepts
+* Threads Assignment
 
 ## Oct 22
-1. Tuple
-2. Regular Expression
-    Bind
-    lambda
-    Placeholder
-3. Atomic Variable
-6. Prevent Loop overlap using mutex(exp 9)
-7. Unique Lock,Lock_guard and unique guard(exp 10a,b)
-8. exp(11)
-    Deadlock Scenario 1(2 Shared Resources)
-    std::mutex m1;
-    std::mutex m2;
-
-    T1                  T2   
-    m1.lock()           m2.lock
-    delay()             m1.lock
-    m2.lock()                   
-
-    Solution:
-    * using diff_lock and atomic lock
-    std::unique_lock<std::mutex> u1(m1,std::def_lock)  //Global
-    std::unique_lock<std::mutex> u2(m2,std::def_lock)
-    std::lock(u1,u2)
-
-9. Pre Read
-    std::condition_variables
-    std::async
-    std::future
-    std::promise
+* Unique Lock and unique guard/Lock Guard(10a,10b)
+* Dead Lock - pb2
+* Self Study:
+    1. Tuple
+    2. Regular Expression
+    3. Bind
+    4. lambda
+    5. Placeholder
 
 Activity:-
 * Post read of covered topics (thread, mutex, locks etc)
@@ -53,8 +46,6 @@ Activity:-
 * Coding Tasks
 * File Handling, Namespaces (if pending)
 * Exception Handling, give a try
-
-* Vine Re
 
 
 ## Oct 21
@@ -72,7 +63,7 @@ Activities:-
 Further:-
 * concurrency in C++ ==> std::thread, std::async
 * IPC techniques  ==> std::mutex, some locks, std::condition_variable etc.
-* std::future, std::promise (if time permits
+* std::future, std::promise (if time permits)
 
 
 ## Oct 20

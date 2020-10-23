@@ -1,6 +1,13 @@
-/* __ Parallel SumArray
+/* __ Parallel SumArray__
 
-g++ sumArray.cpp -lpthread && ./a.out
+Parallel summing of array using Threads
+
+* Multiple Threads for different range of array for sum
+* All threads are concurrent 
+* Gets result fast
+* used for large array processing
+
+g++ exp15b.cpp -lpthread && ./a.out
 
 */
 
@@ -42,4 +49,13 @@ print("end");
 
 
 }
- 
+
+
+/* Output
+
+Main
+Results Computing...
+Result: 55
+end
+
+*/

@@ -1,4 +1,6 @@
 ## Concurrency and IPC
+* concurrency in C++ ==> std::thread, std::async
+* IPC techniques  ==> std::mutex, some locks, std::condition_variable etc.
 
 ### Threads
 * sub tasks in a process
@@ -32,6 +34,9 @@
     * Exit Section
 
 * Mutual Exclusion
+Mutual Exclusion(Mutex) - to avoid race condition,deadlock
+
+
     It prevents the simultaneous access to the shared resources
     * Techniques
         * Semophores(no c++ support)
@@ -43,7 +48,7 @@
             Other Threads cant access this variable if this is used by one thread
 
 * Signaling and Synchronization
-    * Semaphores
+    * Semaphores(no c++ support)
     * Condition Variable
 
 * Dead lock   
@@ -56,6 +61,12 @@ here if the T2 tries to lock resources that are later used by
 ## Condition Variable
 * Co-ordinate the Communication between the inter threads if there is any condition needs to be satisfied
 
-## std::async
-* to create threads for function and get back the results to the main function
-* Launch async
+
+## Function binding
+* simple function binding
+   compute(arg){}
+   std::bind(compute,arg)
+
+* Call member binding
+  std::bind(&Class::objMember, obj, arg)
+  std::bind(&Stack::push, s1, val)

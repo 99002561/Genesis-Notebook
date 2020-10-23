@@ -1,15 +1,4 @@
-## Modern C++(Advance)
-* C++ 11/14 Language features
-* Move Semantics
-* [Trival Classes](https://www.geeksforgeeks.org/trivial-classes-c/)
-* Lambdas & Callable elements
-* STL Improvements
-* Smart Pointers
-* Concurrency and IPC
-* Basic Design aspects
-
-
-## [Core C++ Concepts](Core_C++)
+# [Core C++ Concepts](Core_C++)
 
 1. Introduction
     1. Modern C++ Standards
