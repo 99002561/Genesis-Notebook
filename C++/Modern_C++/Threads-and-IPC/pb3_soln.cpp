@@ -82,19 +82,20 @@ int main(){
 Main-- Welcome
 Thread Producer
 Thread Consumer
-C--5
-C--4
-C--3
-C--2
-C--1
-C--0
-P--0
-P--1
-P--2
-P--3
-P--4
-P--5
-End
-
+P--6
+P--7
+P--8
+P--9
+P--10
+P--11
+Producer Thread - Thanks
+Thread Consumer--start
+C--11
+C--10
+C--9
+C--8
+C--7
+C--6
+Main--End
 
 */

@@ -25,7 +25,8 @@
     * exception handling
     * revise all concepts
     * what is async threads use
-    * explicit for no asssignment
+    * explicit for no assignment
+    * All threads and ipc concepts
 * Threads Assignment
 * Lambda Implementation for Threads
 
@@ -85,6 +86,7 @@ Further:-
 * function pointer and all pointers
 * heap block
 * return value optimization
+* RTTI Concepts
 
 2. Linux
 * Process and Threads
