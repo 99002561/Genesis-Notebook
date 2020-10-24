@@ -1,6 +1,16 @@
+/*__lock guard example__
+
+
+
+
+
+
+*/
+
+
 /* __Problem1 Solution__Mutex
 
-  Here Mutual Exclusion is applied for val variable inside the loop
+  Here Thread Syncronization is applied for val variable inside the loop
 
   std::mutex m1  // Declared Globally
   m1.lock()

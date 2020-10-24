@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/user/Documents/Cpp Assignment/Set1/Account/pch.h
+gtest/gtest.h
+/home/user/Documents/Cpp Assignment/Set1/Account/gtest/gtest.h
+string
+-
+
+/home/user/Documents/Cpp Assignment/Set1/Account/test.cpp
+pch.h
+/home/user/Documents/Cpp Assignment/Set1/Account/pch.h
+

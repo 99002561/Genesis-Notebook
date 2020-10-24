@@ -2,7 +2,7 @@
 
 # Set-1:
 * Implement Box as a class
-* Impement  Point as a class
+* Implement  Point as a class
 * Implement Banking Account as a class
 * Implement Mobile Customer as a class
 * Implement Color as user defined type
@@ -12,7 +12,7 @@
 
 # Set-2
 * Distance class - Operator overloading 
-* Fraction class - Operator overloading (numerator, denomenator)
+* Fraction class - Operator overloading (numerator, denominator)
 * Operator overloading with Time class
 * Operator overloading with currency class
 * Operator overloading with complex number
