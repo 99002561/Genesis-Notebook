@@ -8,7 +8,7 @@ Genesis Program Notes
 * [Work Setup](C++/Setup.md)
 * [Core Essentials](C++/Core_C++/README.md)
 * [Advanced C++](C++/Advanced/)
-* [Threads and IPC](C++/Advanced/Threads-and-IPC/)
+* [Threads and IPC](C++/Advanced/Threads-and-IPC/README.md)
 
 ## Github
 * [Git workSetup](Github/Setup.md)
