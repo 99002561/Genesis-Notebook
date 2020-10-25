@@ -11,8 +11,6 @@
 * SDLC (22)
 
 ## Ocr 23
-* File Name Change
-* Thread Notes Refactoring
 * Self Study/Additional:-
     * get_id from std::thread
     * Detachable Threads
