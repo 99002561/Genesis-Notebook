@@ -4,6 +4,8 @@
 ### Repo
     git init  
     git clone repolink.git
+    git config --global user.name "Naga Akhil ES"
+    git config --global user.email nagaakhil.es@ltts.com
     git add.
     git commit -m "commit message"
     git commit --amend
