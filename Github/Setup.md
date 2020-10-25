@@ -14,6 +14,8 @@
 
 * [Git Start Docs](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control#ch01-getting-started)
 * [Github Docs](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/overview)
+* [Markdown?](https://guides.github.com/features/mastering-markdown/)
+* [Markdown Writing](https://docs.github.com/en/free-pro-team@latest/github/writing-on-github/basic-writing-and-formatting-syntax)
 
 ### VsCode
 * [Version Control](https://code.visualstudio.com/docs/editor/versioncontrol)

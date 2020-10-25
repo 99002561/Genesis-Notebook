@@ -1,6 +1,7 @@
 # Todo List
 * Oct 23
 * Oct 22
+* git fork check
 * Threads Assignments (tomorrow evening) 
 * Study of Core C++ (22nd)
 * Study of Advanced C++(23rd)
