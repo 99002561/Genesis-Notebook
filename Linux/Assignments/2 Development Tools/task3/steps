@@ -1,0 +1,2 @@
+gcc -c on source files
+ar rcs destination.a all.o files

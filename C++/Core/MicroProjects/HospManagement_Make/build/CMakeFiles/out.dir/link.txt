@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/out.dir/home/nagaakhil/Documents/WorkSpace/HospManagement_Make/test/test.cpp.o  -o out  -Wl,-Bstatic -lgtest -Wl,-Bdynamic -lpthread 

@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/user/Documents/Genesis/Workbook/imdb/src/imdb.cpp
+imdb.h
+/home/user/Documents/Genesis/Workbook/imdb/src/imdb.h
+
+/home/user/Documents/Genesis/Workbook/imdb/src/imdb.h
+movies.h
+/home/user/Documents/Genesis/Workbook/imdb/src/movies.h
+iostream
+-
+
+/home/user/Documents/Genesis/Workbook/imdb/src/movies.cpp
+movies.h
+/home/user/Documents/Genesis/Workbook/imdb/src/movies.h
+iostream
+-
+
+/home/user/Documents/Genesis/Workbook/imdb/src/movies.h
+string
+-
+
+/home/user/Documents/Genesis/Workbook/imdb/test/imdbTest.h
+../src/imdb.h
+/home/user/Documents/Genesis/Workbook/imdb/src/imdb.h
+../src/imdb.cpp
+/home/user/Documents/Genesis/Workbook/imdb/src/imdb.cpp
+../src/movies.cpp
+/home/user/Documents/Genesis/Workbook/imdb/src/movies.cpp
+gtest/gtest.h
+-
+
+/home/user/Documents/Genesis/Workbook/imdb/test/test.cpp
+imdbTest.h
+/home/user/Documents/Genesis/Workbook/imdb/test/imdbTest.h
+imdb.cpp
+/home/user/Documents/Genesis/Workbook/imdb/test/imdb.cpp
+movies.cpp
+/home/user/Documents/Genesis/Workbook/imdb/test/movies.cpp
+

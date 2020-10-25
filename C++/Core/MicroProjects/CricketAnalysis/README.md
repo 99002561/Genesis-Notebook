@@ -1,0 +1,4 @@
+# Design
+
+ # wishlist
+ * virtual functions

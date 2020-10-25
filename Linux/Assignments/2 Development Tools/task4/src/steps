@@ -1,0 +1,2 @@
+gcc -c of files
+gcc -shared destination.so source.o files

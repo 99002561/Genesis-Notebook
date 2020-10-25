@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1601934892 source:c:\users\training\documents\genesis\workbook\miniproject\restomanagement\bill-test.cpp
+	"bill.h"
+	<gtest/gtest.h>
+
+1601934755 c:\users\training\documents\genesis\workbook\miniproject\restomanagement\bill.h
+	"customer_order.h"
+	<iostream>
+	<list>
+	<iterator>
+
+1601934677 c:\users\training\documents\genesis\workbook\miniproject\restomanagement\customer_order.h
+	<string>
+	"restaurant.h"
+
+1601934745 c:\users\training\documents\genesis\workbook\miniproject\restomanagement\restaurant.h
+	<string>
+	<iostream>
+
+1601934075 source:c:\users\training\documents\genesis\workbook\miniproject\restomanagement\bill.cpp
+	"customer_order.h"
+	"bill.h"
+	<list>
+	<iterator>
+
+1601934075 source:c:\users\training\documents\genesis\workbook\miniproject\restomanagement\restaurant.cpp
+	"restaurant.h"
+	<iostream>
+
+1601935088 source:c:\users\training\documents\genesis\workbook\miniproject\restomanagement\customer_order.cpp
+	"customer_order.h"
+	"restaurant.h"
+

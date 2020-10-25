@@ -1,0 +1,3 @@
+/home/nagaakhil/Documents/WorkSpace/HospManagement_Make/build/CMakeFiles/rebuild_cache.dir
+/home/nagaakhil/Documents/WorkSpace/HospManagement_Make/build/CMakeFiles/edit_cache.dir
+/home/nagaakhil/Documents/WorkSpace/HospManagement_Make/build/CMakeFiles/out.dir

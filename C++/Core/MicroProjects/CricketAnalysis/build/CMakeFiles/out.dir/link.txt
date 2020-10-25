@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/out.dir/home/user/Documents/WorkSpace/CricketAnalysis/test/test.cpp.o  -o out  -Wl,-Bstatic -lgtest -Wl,-Bdynamic -lpthread 
