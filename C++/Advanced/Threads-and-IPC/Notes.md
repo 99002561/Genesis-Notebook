@@ -54,12 +54,15 @@
 ### Mutual Exclusion (Mutex)
 * to avoid race condition,deadlock
 * It prevents the simultaneous access to the shared resources
+* it allows only one thread at one time to access the resource and other threads will be waiting
 * Techniques
     * Semophores(no c++ support)
         For Multiple Shared Resource Access
     * Spinlocks(no c++ suppport)
     * Mutex
         for single Shared resources between the threads(using lock)
+        * Lock Guard
+        * Unique Lock
     * Atomic Variables(c++)
         Other Threads cant access this variable if this is used by one thread
 

@@ -23,8 +23,9 @@
 * [Preventing Loop Overlap using Mutex](pb1_soln3.cpp)
 * [Basic Stack Class example](stack.cpp)
 * [Stack Class with Mutex](exp9.cpp)
-* [lockGuard](exp10a.cpp)
-* [uniqueGuard](exp10b.cpp)
+* [lock_guard](exp10a.cpp)
+* [unique_lock basic lock](exp10b.cpp)
+* [unique_lock transfer of ownership](exp10c.cpp)
 * [Dead Lock Problem](pb2.cpp)
 * [myAtomic class](myAtom.cpp)
 

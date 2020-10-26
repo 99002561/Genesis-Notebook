@@ -3,6 +3,9 @@
 1. Create Thread Handler(Declaration) for a function
 2. Join Threads to main Threads(to wait until threads finish)
 
+
+* Threads are dynamic  library so need to tag while compiling
+
 cd Notebook/C++/Modern_C++/Threads
 g++ exp1.cpp -lpthread && ./a.out
 

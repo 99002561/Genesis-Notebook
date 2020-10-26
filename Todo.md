@@ -1,7 +1,4 @@
 # Todo List
-* Oct 23
-* Oct 22
-* Threads Assignments (tomorrow evening) 
 * Study of Core C++ (22nd)
 * Study of Advanced C++(23rd)
     - Part1
@@ -25,18 +22,15 @@
     * what is async threads use
     * explicit for no assignment
     * All threads and ipc concepts
-* Threads Assignment
-* Lambda Implementation for Threads
 
 ## Oct 22
-* Unique Lock and unique guard/Lock Guard(10a,10b)
-* Dead Lock - pb2
 * Self Study:
     1. Tuple
     2. Regular Expression
     3. Bind
     4. lambda
     5. Placeholder
+    6. explicit in the constructor
 
 Activity:-
 * Post read of covered topics (thread, mutex, locks etc)
@@ -85,6 +79,10 @@ Further:-
 * heap block
 * return value optimization
 * RTTI Concepts
+* lvalue
+* rvalue
+    named 
+    anonymus
 
 2. Linux
 * Process and Threads
