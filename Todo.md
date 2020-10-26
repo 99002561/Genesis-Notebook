@@ -1,11 +1,8 @@
 # Todo List
-* Study of Core C++ (22nd)
 * Study of Advanced C++(23rd)
     - Part1
     - Part2
-    - Coding Tasks 
-    - Project Implementation
-* SDLC (22)
+* Study of Core C++ (22nd)
 
 ## Ocr 23
 * Self Study/Additional:-
@@ -16,7 +13,7 @@
     * Mutual exclusion
     * Synchronization
     * ranged for loop
-    * Launch async
+    * Launch ,async,threads
     * exception handling
     * revise all concepts
     * what is async threads use
@@ -33,9 +30,6 @@
     6. explicit in the constructor
 
 Activity:-
-* Post read of covered topics (thread, mutex, locks etc)
-* Pre-read of next topic
-* Coding Tasks
 * File Handling, Namespaces (if pending)
 * Exception Handling, give a try
 
@@ -46,17 +40,6 @@ Activities:-
     - Smart Pointers
     - Universal Pointers
 * continue coding tasks
-* refresh thread & ipc concepts (linux os, posix apis)
-	* threads
-	* mutex
-	* semaphore
-	* producer consumer problem
-	* deadlocks
-Further:-
-* concurrency in C++ ==> std::thread, std::async
-* IPC techniques  ==> std::mutex, some locks, std::condition_variable etc.
-* std::future, std::promise (if time permits)
-
 
 ## Oct 20
 1. refresh move semantics, lambdas (covered topics)

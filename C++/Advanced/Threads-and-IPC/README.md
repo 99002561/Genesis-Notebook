@@ -24,9 +24,9 @@
 * [Basic Stack Class example](stack.cpp)
 * [Stack Class with Mutex](exp9.cpp)
 * [lock_guard](exp10a.cpp)
-* [unique_lock basic lock](exp10b.cpp)
+* [unique_lock basic](exp10b.cpp)
 * [unique_lock transfer of ownership](exp10c.cpp)
-* [Dead Lock Problem](pb2.cpp)
+* [Dead Lock Scenario](pb2.cpp)
 * [myAtomic class](myAtom.cpp)
 
 ## Synchronization(Condition Variable)
