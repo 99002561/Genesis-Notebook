@@ -1,8 +1,26 @@
 # Todo List
-* Study of Advanced C++(23rd)
+* study of oct 27
+* Study of Advanced C++
     - Part1
     - Part2
-* Study of Core C++ (22nd)
+* Study of Core C++
+
+## Oct 27
+* learning Report
+* study
+    * Hardware Specifications
+    * Layered Architecture. 
+    * Beagle Bone Black Specifications and ports.
+    * USB-TTL connections of BBB.
+    * Beaglebone Black Linux Default Booting process.
+    * Stages of Booting process.
+        * RBL(ROM Boot Loader)
+        * SPL/MLO(Secondary Program Loader/Memory Loader.
+        * U-Boot
+        * Linux Kernel
+        * RFS(Root File System)
+    * Clocking configuration.
+
 
 ## Ocr 23
 * Self Study/Additional:-
