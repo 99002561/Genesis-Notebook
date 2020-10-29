@@ -5,6 +5,38 @@
     - Part2
 * Study of Core C++
 
+## Oct 29
+1. Linux boot sequence discussion-Boot strap loader part  
+2 linux boot sequence discussion - Kernel Entry 
+3 BBB eMMC update
+4 Enabling Internet on BBB when host is Ubuntu
+5. Linux Device Tree - Why Linux device tree is Introduced ??
+6. Writing uEnv.txt file from scratch About RFS
+7. Generating "initramfs" using RFS
+8. Booting BBB over Serial Port- required setup   Testing Serial boot part 1   
+9. Booting BBB Over TFTF protocol   
+10. Understanding U-boot Source Tree
+
+## Oct 28
+ 1 What do we need to successfully boot linux on BBB ?   
+ 2 BBB boot options   
+ 3 BBB Linux boot sequence discussion: ROM and SPL   
+ 4 BBB Linux boot sequence discussion-MLO/SPL job   
+ 5 Why AM335x RBL cannot load the Uboot directly to DDR?   
+ 6 Booting RBL and MLO on BBB   
+ 7  Testing MLO image on BBB   
+ 8 Testing U-boot image on BBB   
+ 9 BBB Linux boot sequence Discussion-uboot   
+ 10 Decoding U-boot Header of uImage Manually   
+ 11 Linux boot sequence discussion-Boot strap loader part 1   
+ 12 linux boot sequence discussion - Kernel Entry   
+ 13 BBB eMMC update   14 Enabling Internet on BBB when host is Ubuntu
+
+Activity for Today:
+1. Testing MLO image on BBB   and Testing U-boot image on BBB. Explain each and every section of stage in the learning report.
+2. SPend some time in uboot area and execute the commands. and also check for various environmental variables
+2. Learn and quote the linux boot sequence after the booting.
+
 ## Oct 27
 * learning Report
 * study
