@@ -1,4 +1,5 @@
 # Todo List
+* check for Copyright and confidential files
 * study of oct 27
 * Study of Advanced C++
     - Part1

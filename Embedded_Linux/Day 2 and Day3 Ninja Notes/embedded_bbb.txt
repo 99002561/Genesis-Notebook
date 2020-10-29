@@ -1,0 +1,190 @@
+BeagleBone black
+	* embedded systems arti.
+		applications
+		middleware(user defined API)(.c & .h files)
+		Os+drivers(.c &.h files)
+		Hardware
+	* os is complusary for time based programs
+	* USer defined Drivers & kernals drivers
+	* Os is linux debian or arnstrom
+	* texa series of AM335 in SOC
+	*  AM335x 1GHz ARM® Cortex-A8	
+    		512MB DDR3 RAM(difference between DDR2 And DDR5)
+    		4GB 8-bit eMMC on-board flash storage
+    		3D graphics accelerator
+    		NEON floating-point accelerator
+    		2x PRU 32-bit microcontrollers
+	*  Connectivity
+	   	USB client for power & communications
+    		USB host
+    		Ethernet
+    		HDMI
+    		2x 46 pin headers
+    		
+    	*  Software Compatibility
+	        Debian
+       	Android
+    		Ubuntu
+    		Cloud9 IDE on Node.js w/BoneScript library
+    		plus much more
+
+SOC(Systems on chips)
+	* part number is U5
+	* XAM3359A
+	
+Embedded MMC (eMMC)
+	part No: is U13.
+	
+DDR3 
+	part no : is U12
+
+UART 
+	part no: J1
+
+Boot loader 
+	part no : s2
+
+Power Button 
+	part no: is s3 
+
+Mini port (power BBB(BealgeBone Black)):
+	part no: P6
+	
+Memory card slot:
+	part No: P10
+	
+MMC0 is connected to microSD card.
+MMC1 is Connected to eMMC .
+	
+DC Adapter:
+	1A current and 5V voltage.
+	
+* more tha 2A of current can damage the board (short circuits)
+ 8N1 no parity and one stop bit in bandrate	
+ 
+ 
+ Booting Process have 3 Steps :
+ 	1.RBL(ROM BootLoader) stage
+ 	2.SPL/MLO(Secondary program Loader/ memory Loader) stage
+ 	3.U-Boot stage--To load and Run the linux kernel
+ 	
+ *then handed over to kernel
+ not define by address --spl
+ defined by address -- mlo
+ 
+ * Booting Options
+ 
+ RBL
+ 	* b/w Soc and SPL/MLO there is MMC Interface
+ 	* effect to ROM of SOC as RBL is stored in ROM of SOC
+ 	* Stack setup
+ 	* system clock configuration using pll
+ 	* search memory devices or other bootable interface for mlo or spl
+ 	* copy spl or mlo in SRAM
+ 	* watchdog timer is setup for 3 mins
+ * 11100b--SYSBOOT[4:0]--MMC1-MMC0-UART0-USB0 
+ 
+ 
+ 
+ Day-------2
+ 
+ 
+ installation commands
+ 
+ sudo apt-get update
+ sudo apt-get upgrade
+ sudo apt-get install gparted
+ 
+ *  There are 46 pins at one side each
+  difference to raspiberry is there is an analog pins(7 pins) that only reads 0 to 1.8V only not 3.3V and 5V
+  
+ *  we need to make two partitions
+ >>dmesg
+   SD card-sdb
+ * open gparted software select the sd card sdb
+ * delete or unmount any previous images if present
+ * go to unallocated and click on new 
+ * got to file system select fat16 -automatically 4 gb is selected( 2gb is enough)
+ * In label area in CAPS write BOOT-> click on add
+ * to make RFS select in file system-> ext3
+ * In label area in CAPS write ROOTFS-> click on add
+ * To format - click on check box on top -> apply
+ * Right click on boot partition -> manage flags-> click on boot-> close
+ * In file mangaer u will find -> BOOT folder 
+ * copy the MLO file into BOOT folder
+ * unmount sd card-> keep the sd card in the bbb-> plug in ttl cable  
+ * open in terminal -> sudo minicom ->( welcome to minicom 2.7.1)
+ * Long prwess s2 button -> use mini cable to give power 
+ * Now copy the u-boot image into BOOT folder.
+ * Long press s2 button -> use mini cable to give power 
+ * RBL->spl/mlo strts from sram->DDR3
+ * we find the error of unable to read file
+ * u-image,u-env.txt is always in RFS 
+ * Default IP-Address -ipaddr=192.168.7.2 , serverip=192.168.7.1 
+ * loadaddr=0x82000000 , fdtaddr=0x88000000
+ * u-env ->( combination of commands and environment variables)
+    console=ttyO0,115200n8->( baud rate)
+    ipaddr=192.168.7.2-> default ip address
+    serverip=192.168.7.1
+    loadaddr=0x82000000
+    fdtaddr=0x88000000-> blob
+    loadfromsd=load mmc 0:2 ${loadaddr} /boot/uImage;load mmc 0:2 ${fdtaddr} /boot/am335x-boneblack.dtb->(0=sdcard,2=2nd partition)
+    linuxbootargs=setenv bootargs console=${console} root=/dev/mmcblk0p2 rw ->(we shld see log files hence it acts as print)
+    uenvcmd=setenv autoload no; run loadfromsd; run linuxbootargs; bootm ${loadaddr} - ${fdtaddr} -> (to set autoload , bootm= boot from memory).
+ * go to Angstrom -> open terminal 
+ >>sudo cp -r * /media/user/ROOTFS
+ >>sync 
+ * After immediate start of bbb -> hold space button it will stop automatically and enter u-boot -> >>help-> it will display all commands -> >>printenv-> it will print env details.
+
+* u- image is combination of -> address, zimage 
+ zimage-> struct defination.
+ 
+* in u boot terminal
+ << load mmc 0:2 0x82000000 /boot/uImage
+ 
+* md 0x82000000 4->( 4=read 4 bytes)
+o/p is in little endian form
+56190527 (magic number) b162bfef (crc checksum) 900a0859 (timestamp) 38ea8300 (img size)
+
+* <<iminfo 0x82000000 -> (information about image)
+* boot -> to start booting  
+* ping 192.168.7.1 
+ ping 8.8.8.8 -> google dns
+  
+
+   
+Day3-------------------
+
+
+ * Dtb files are called as device tree ( Flatterned Device tree )
+ * The on board peripherals which connect to SPI, I2C, SDIO, Ethernet etc. Have no capability to announce there existence on the board by themselves to the operating system. These peripherals are also call as “Platform Devices” But USB device has the inbuilt intelligence to do the same.
+ * Instead of adding hard coded hardware details in to the linux kernel board file, every board vendors has to come up with a file called DTS (Device Tree Source file).
+ * This DTS file will be converted to DTB file using Device tree compiler.
+ * 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

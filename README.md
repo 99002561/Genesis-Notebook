@@ -13,6 +13,7 @@ Genesis Program Notes
 
 ## Github
 * [Git workSetup](Github/Setup.md)
+* [Sample Markdown file](markdown)
 * [Git Commands](Github/Commands.md)
 * [Git Actions](Github/Actions.md)
 
