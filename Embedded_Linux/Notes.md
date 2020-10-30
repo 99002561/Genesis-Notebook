@@ -40,6 +40,7 @@
 * SOC is: AM3358BZCZ100 on REV ‘C’ BBB Board
 * [Datasheet](AM335x_data_sheet.pdf)
 * [Manual](AM335x_manual.pdf)
+
 ![Features](ARM335x_features.png)
 
 ## 3. DDR3
@@ -142,7 +143,10 @@ In this mode, the ROM code of the SOC will try to download the boot images from 
 		double space to go in and single space + enter to select
 
 
-### 2. Booting Stages
+### 2. Booting Sequence
+
+![boot sequence](bootSequence.jpg)
+
 1. ROM bootloader(RBL)
 	1. stack setup
 	2. watchdog timer configuration(3minutes)
@@ -178,7 +182,7 @@ In this mode, the ROM code of the SOC will try to download the boot images from 
 	setenv
 	loadx
 	loady
-	
+
 #### 1. SD Card
 1. Make SD Card Bootable
 	1. Install Gparted
@@ -267,7 +271,7 @@ loady
 1. enter into uart boot mode
 	1. connect serial ttl cable
 	2. press s2 and power by dc adapter
-2. Load TI Images to DRAM [file](BBB_images/serial-boot.zip)
+2. Load TI Images to DRAM [Images link](BBB_images/serial-boot.zip)
 	1. open terminal and run `sudo minicom` 
 		Response: `CCCCCCCCCCC`
 	2. load MLO(u-boot-spl.bin) using x-modem `(cntrl+a)+s`
@@ -282,10 +286,53 @@ loady
 	`bootm ${kernelImage_addr} ${inrafrms_addr} ${dtb_addr}`
 	`bootm 0x82000000 0x88080000 0x88000000`
 
-* [Logs](UARTlog.txt)
+* [Logs](BBB_logs/UARTlog.txt)
+
+## 6. Cross tool-chain for linux host(PC)
+
+### Installation
+Download arm cross toolchain for your Host machine
+[gcc-linaro-5.5.0-2017.10-x86_64_arm-linux-gnueabihf.tar.xz](https://releases.linaro.org/components/toolchain/binaries/latest-5/latest-5/arm-linux-gnueabihf/)
+or 
 
 
+### Settings
+export  path of the cross compilation toolchain
+1. open bashrc `code ~/.bashrc` 
+2. update path in .bashrc file 
+	`export PATH=/home/user/Documents/gcc-linaro-5.5.0-2017.10-x86_64_arm-linux-gnueabihf/bin:$PATH`
+	or 
+	`export PATH=$PATH:/home/user/Documents/gcc-linaro-5.5.0-2017.10-x86_64_arm-linux-gnueabihf/bin`
+3. reload bashrc `source /home/user/.bashrc`
+4. `arm` and couples of times TAB button to see the files
+	
 
 # Todo
+* Day3 content update
 * qemu(Emulator)
 * booting from TFTT protocol
+* Yammer preRead
+* Menu Configurations
+* Compiling u boot Image
+* alias names for particular file
+* busybox
+
+# Concepts
+* Basics of Beagle board
+* Basics of ARM
+* Boot sequence
+* autoBoot from SD card 
+* boot from SD card 
+	* user U-BOOT commands	
+* Uboot Raw file explore
+* Booting from UART
+* Compiling uBoot.img
+	* Change Default Configurations(Change autoboot ti)
+* Compiling Linux kernel for BBB
+	* Change kernel logs like logo
+
+## Reference links
+[Logs](https://johnvidler.co.uk/linux-journal/LJ/234/11551.html)
+[u-boot.img raw c files](ftp://ftp.denx.de/pub/u-boot/)
+[Beagle board Github](https://github.com/beagleboard/linux)
+[Compiler Tools](https://releases.linaro.org/components/toolchain/gcc-linaro/latest-5/)
