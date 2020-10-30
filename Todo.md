@@ -6,6 +6,17 @@
     - Part2
 * Study of Core C++
 
+## Oct 30
+* About RFS
+* Generating "initramfs" using RFS
+* Booting BBB over Serial Port
+* Testing Serial boot part
+* Booting BBB Over TFTF protocol
+* Understanding U-boot Source Tree
+* Cross tool-chain installation
+* Configuring and generating SPL,MLO,U-boot images
+* Generating RFS
+
 ## Oct 29
 1. Linux boot sequence discussion-Boot strap loader part  
 2 linux boot sequence discussion - Kernel Entry 
@@ -33,10 +44,6 @@
  12 linux boot sequence discussion - Kernel Entry   
  13 BBB eMMC update   14 Enabling Internet on BBB when host is Ubuntu
 
-Activity for Today:
-1. Testing MLO image on BBB   and Testing U-boot image on BBB. Explain each and every section of stage in the learning report.
-2. SPend some time in uboot area and execute the commands. and also check for various environmental variables
-2. Learn and quote the linux boot sequence after the booting.
 
 ## Oct 27
 * learning Report

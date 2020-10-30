@@ -321,6 +321,7 @@ export  path of the cross compilation toolchain
 * Compiling u boot Image
 * alias names for particular file
 * busybox
+* Niranjan logs
 
 # Concepts
 * Basics of Beagle board
@@ -335,6 +336,7 @@ export  path of the cross compilation toolchain
 	* Change Default Configurations(Change autoboot ti)
 * Compiling Linux kernel for BBB
 	* Change kernel logs like logo
+
 
 ## Reference links
 [Logs](https://johnvidler.co.uk/linux-journal/LJ/234/11551.html)
