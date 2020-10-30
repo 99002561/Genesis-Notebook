@@ -295,6 +295,11 @@ Download arm cross toolchain for your Host machine
 [gcc-linaro-5.5.0-2017.10-x86_64_arm-linux-gnueabihf.tar.xz](https://releases.linaro.org/components/toolchain/binaries/latest-5/latest-5/arm-linux-gnueabihf/)
 or 
 
+sudo apt-get install libncurses5-dev libncursesw5-dev
+sudo apt-get install libncurses5-dev libncursesw5-dev
+sudo apt-get install -y u-boot-tools
+sudo apt install lzop
+
 
 ### Settings
 export  path of the cross compilation toolchain
@@ -305,7 +310,7 @@ export  path of the cross compilation toolchain
 	`export PATH=$PATH:/home/user/Documents/gcc-linaro-5.5.0-2017.10-x86_64_arm-linux-gnueabihf/bin`
 3. reload bashrc `source /home/user/.bashrc`
 4. `arm` and couples of times TAB button to see the files
-	
+
 
 # Todo
 * Day3 content update
