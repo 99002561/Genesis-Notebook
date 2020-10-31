@@ -89,7 +89,7 @@ The AM335x SOC boots from the following sources
 3) USB
 4) eMMC
 5) SD card
-6) Ethernet
+6) Ethernet(TFTT protocol)
 6) UART
 7) SPI
 That means, you can keep the boot images in any of the above memory or peripheral and you can able to boot this SOC.
@@ -174,16 +174,9 @@ In this mode, the ROM code of the SOC will try to download the boot images from 
 
 ### 3. Booting Setup
 
-#### u-boot area commands
-	printenv
-	iminfo
-	help
-	load
-	setenv
-	loadx
-	loady
+#### SD Card
 
-#### 1. SD Card
+**Auto Booting**
 1. Make SD Card Bootable
 	1. Install Gparted
 		1. Update the package index
@@ -200,74 +193,50 @@ In this mode, the ROM code of the SOC will try to download the boot images from 
 		- file system: ext3/ext4 
 	5. Apply all operations
 	6. set boot flag for BOOT partition
-
 2. copy Image files to BOOT partition
 	1. MLO
 	2. u-boot.img
 	3. uEnv.txr
-
 3. Copy ROOT files to ROOTFS partition
 	1. open ROOT files directory in terminal
 	2. `sudo cp -r * /media/user/ROOTFS`
-
 4. Insert SD card to BBB board and 
-
 5. connect serial ttl cable to pc and open terminal -> run minicom
-
 6. boot the board from SD card using S2 switch
-
 7. [Observe booting logs](bootingLog.txt)
 
- Auto Booting procedure
-make serial interface with pc
-Make ur BBB to enter from SD card
+**Manual Booting**
+0. Boot from SD Card and Enter manual booting
+1. Write uEnv.txt file 
+	console=ttyO0,115200n8
+	ipaddr=192.168.7.2
+	serverip=192.168.7.1
+	loadaddr=0x82000000
+	fdtaddr=0x88000000
+	1. Write Commands
+		1. Load uImage file
+			loadfromsd=load mmc 0:2 ${loadaddr}  /boot/uImage
+		2. Load .dtb file
+			load mmc 0:2 ${fdtaddr} /boot/am335x-boneblack.dtb
+		3.  get Logs
+			linuxbootargs=setenv bootargs console=${console} root=/dev/mmcblk0p2 rw
+	2. Run Commands
+		uenvcmd=setenv autoload no; 
+		run loadfromsd;
+		run linuxbootargs; 
+		bootm ${loadaddr} - ${fdtaddr}
+2.	Load uEnv file
+	`loady` 
+3. Import env variable
+	`env import -t loaded location`
+	other Cmds
+	`printenv`
+	`iminfo`
+	`help`
+4. Boot to kernel 
+	`run bootcmd` or `boot`
 
-observe response from BBB in ur serial terminal
-
-* u-boot.img
- uEnv.txt
- dtb file
- bootstrap
- kernel image
- U-boot area commands
-
-
-Day 3 Notes
-
- dtc file
-
-In embedded system the source code is converted to hex file 
-and placed in the memory
-peripheral drivers are hard loaded
-
- uEnv.txt(y-modem)
-
-console=ttyO0,115200n8
-ipaddr=192.168.7.2
-serverip=192.168.7.1
-loadaddr=0x82000000
-fdtaddr=0x88000000
-
-
-1. Write Commands
-	1. Load uImage file
-		loadfromsd=load mmc 0:2 ${loadaddr}  /boot/uImage
-	2. Load .dtb file
-		load mmc 0:2 ${fdtaddr} /boot/am335x-boneblack.dtb
-	3.  get Logs
-		linuxbootargs=setenv bootargs console=${console} root=/dev/mmcblk0p2 rw
-
-2. Run Commands
-	uenvcmd=setenv autoload no; 
-	run loadfromsd;
-	run linuxbootargs; 
-	bootm ${loadaddr} - ${fdtaddr}
-
-
-loady
-
-
-#### 2. UART Port
+#### UART Port
 1. enter into uart boot mode
 	1. connect serial ttl cable
 	2. press s2 and power by dc adapter
@@ -286,60 +255,90 @@ loady
 	`bootm ${kernelImage_addr} ${inrafrms_addr} ${dtb_addr}`
 	`bootm 0x82000000 0x88080000 0x88000000`
 
-* [Logs](BBB_logs/UARTlog.txt)
 
-## 6. Cross tool-chain for linux host(PC)
+## Linux Building
 
-### Installation
-Download arm cross toolchain for your Host machine
+### 1. Cross Compiler(Linux Host)
+1. Download arm cross toolchain for your Host machine
 [gcc-linaro-5.5.0-2017.10-x86_64_arm-linux-gnueabihf.tar.xz](https://releases.linaro.org/components/toolchain/binaries/latest-5/latest-5/arm-linux-gnueabihf/)
-or 
+2. Install Development Tools
+	* `sudo apt install build-essential`
+	* `sudo apt install bison`
+	* `sudo apt install flex`
+	* `sudo apt-get install libncurses5-dev libncursesw5-dev`
+	* `sudo apt-get install -y u-boot-tools`
+	* `sudo apt install lzop	`
+3. settings
+	export  path of the cross compilation toolchain
+	1. open bashrc `code ~/.bashrc` 
+	2. update path in .bashrc file 
+		`export PATH=/home/user/Documents/gcc-linaro-5.5.0-2017.10-x86_64_arm-linux-gnueabihf/bin:$PATH`
+		 or 
+		`export PATH=$PATH:/home/user/Documents/gcc-linaro-5.5.0-2017.10-x86_64_arm-linux-gnueabihf/bin`
+	3. reload bashrc `source /home/user/.bashrc`
+	4. `arm` and couples of times TAB button to see the files
 
-sudo apt-get install libncurses5-dev libncursesw5-dev
-sudo apt-get install libncurses5-dev libncursesw5-dev
-sudo apt-get install -y u-boot-tools
-sudo apt install lzop
+### 2. Uboot Compilation
+Building bootloader u-boot.img and u-boot-spl.bin(MLO)
+0. Download u-boot [u-boot.img raw c files](ftp://ftp.denx.de/pub/u-boot/)
+1. Clean old object files
+	`make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- distclean`
+2. Generate Default Configurations
+	`make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- am335x_boneblack_defconfig`
+3. run menuconfig, if you want to do any settings other than default configuration . 
+	`make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf-  menuconfig`
+4. To generate bootloader
+	`make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j4`
+	To Cores `nproc`(4 core machine) 
 
+### 3. Linux Compilation
+1. Download Linux kernel [Beagle board Linux kernel](https://github.com/beagleboard/linux)
+2. Clean the Directory
+	`make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- distclean`
+3. set defualt configurations
+	` make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- bb.org_defconfig`
+4. Menu Configurations
+	`make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- menuconfig`
+5. Generate Uboot Image and set dtb file address
+	make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- uImage dtbs LOADADDR=0x80008000 -j4
+6. Generate Modules
+	make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j4 modules
+7. Generate RFS_Static using Busy box Compilation [link](###%20Busy%20box%20compilation)
+8. Generate library files
+	`make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- INSTALL_MOD_PATH=/home/user/softwares/RFS_Static modules_install`
 
-### Settings
-export  path of the cross compilation toolchain
-1. open bashrc `code ~/.bashrc` 
-2. update path in .bashrc file 
-	`export PATH=/home/user/Documents/gcc-linaro-5.5.0-2017.10-x86_64_arm-linux-gnueabihf/bin:$PATH`
-	or 
-	`export PATH=$PATH:/home/user/Documents/gcc-linaro-5.5.0-2017.10-x86_64_arm-linux-gnueabihf/bin`
-3. reload bashrc `source /home/user/.bashrc`
-4. `arm` and couples of times TAB button to see the files
+### 4. Busy box compilation
+**Features**
+* This is used to generate one executable file for which all other files report
+* This is used to generate the minimal rootfs with kernel files ie RFS_Static
+* Compilation utility by menu gui
+	* kernel optimization
+	* kernel with static or dynamic libraries 
+**Steps**
+1. Install Busybox [link](https://www.busybox.net/downloads/busybox-1.26.0.tar.bz2)
+2. Open terminal in the busy box directory
+3. Clean old files
+	`make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- distclean`
+4. generate the default configuration file
+	`make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- defconfig`
+5. Change menu settings
+	1. `make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- menuconfig`
+	2. change busybox settings->static library select and save
+6. generate the ROOT File system 
+	`make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- CONFIG_PREFIX=/home/user/softwares/RFS_Static install -j`4
+7. Check the files generated in the path
 
-
-# Todo
-* Day3 content update
-* qemu(Emulator)
-* booting from TFTT protocol
-* Yammer preRead
-* Menu Configurations
-* Compiling u boot Image
-* alias names for particular file
-* busybox
-* Niranjan logs
-
-# Concepts
-* Basics of Beagle board
-* Basics of ARM
-* Boot sequence
-* autoBoot from SD card 
-* boot from SD card 
-	* user U-BOOT commands	
-* Uboot Raw file explore
-* Booting from UART
-* Compiling uBoot.img
-	* Change Default Configurations(Change autoboot ti)
-* Compiling Linux kernel for BBB
-	* Change kernel logs like logo
+## Peripheral Interface
+* Onboard peripherals are handled device drivers
+* pin address is offset + base address
+* To pin details
+	`root@beaglebone:/sys/kernel/debug/pinctrl/44e10800.pinmux-pinctrl-single`
+* Led Handling
+	`sudo su`
+	`root@beaglebone:/sys/class/leds/beaglebone:green:usr3# echo "heartbeat" > trigger`
+	`root@beaglebone:/sys/class/leds/beaglebone:green:usr3# echo "none" > trigger`
 
 
 ## Reference links
-[Logs](https://johnvidler.co.uk/linux-journal/LJ/234/11551.html)
-[u-boot.img raw c files](ftp://ftp.denx.de/pub/u-boot/)
-[Beagle board Github](https://github.com/beagleboard/linux)
-[Compiler Tools](https://releases.linaro.org/components/toolchain/gcc-linaro/latest-5/)
+* [Logs guide](https://johnvidler.co.uk/linux-journal/LJ/234/11551.html)
+* [OEMU linux kernel](https://learningfromyoublog.wordpress.com/)
