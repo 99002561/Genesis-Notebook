@@ -5,6 +5,13 @@
     - Part1
     - Part2
 * Study of Core C++
+* C++ tools 
+    Google Test
+    c++ and pylint or cpp check
+    doxygen
+    code analysis
+* Dynamic and Static libraries
+
 
 ## Ocr 23
 * Self Study/Additional:-

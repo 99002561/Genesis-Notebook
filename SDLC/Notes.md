@@ -63,7 +63,10 @@
 4. Chronological Order
 5. 
 
-# Topics
+
+# SDLC Notes
+
+## Topics
 * V model
 * Agile Model
 * Unit testing
@@ -83,7 +86,6 @@ Test Plan
 CI/CD
 * Git 
 
-# Notes
 ## SDLC Procdedure 
 1. Introduction
     
@@ -118,3 +120,19 @@ CI/CD
 ## Challanges 
 * Power Backup
 * Traceability 
+
+## Testing
+* Testing should be done so that product is defect free when it is delivered to the user.
+* Testing ensures that products do not receive recalls of products.
+* Testing assures high quality of product and ensures product follow strict guidelines and standards which will enhance sales of products thereby increases the profitability of company.
+* Testing saves huge amount of money to company, because if testing is not done at each stage, it can possibly lead to problems when product is launched, which will incur huge losses to company.
+
+## Todo 
+1. Self study
+2. understanding TDLC and TDD
+    4w1h
+    what,why,where,when,how
+3. Application of Mini Project(TDLC and TDD)
+
+## Research Concepts
+* fishbone diagram
