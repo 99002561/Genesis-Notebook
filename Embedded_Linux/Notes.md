@@ -82,7 +82,7 @@ Minicom is used as serial communicate program with BBB board using serial debug 
 
 ## 5. Linux Booting
 
-### 1. Booting Options
+### 1. Booting Sequence
 The AM335x SOC boots from the following sources
 1) NAND Flash
 2) NOR Flash (eXecute In place, XIP)
@@ -143,9 +143,9 @@ In this mode, the ROM code of the SOC will try to download the boot images from 
 		double space to go in and single space + enter to select
 
 
-### 2. Booting Sequence
+### 2. Booting Stages
 
-![boot sequence](bootSequence.jpg)
+![boot stages](bootStages.jpg)
 
 1. ROM bootloader(RBL)
 	1. stack setup
@@ -203,7 +203,6 @@ In this mode, the ROM code of the SOC will try to download the boot images from 
 4. Insert SD card to BBB board and 
 5. connect serial ttl cable to pc and open terminal -> run minicom
 6. boot the board from SD card using S2 switch
-7. [Observe booting logs](bootingLog.txt)
 
 **Manual Booting**
 0. Boot from SD Card and Enter manual booting
@@ -240,7 +239,7 @@ In this mode, the ROM code of the SOC will try to download the boot images from 
 1. enter into uart boot mode
 	1. connect serial ttl cable
 	2. press s2 and power by dc adapter
-2. Load TI Images to DRAM [Images link](BBB_images/serial-boot.zip)
+2. Load TI Images to DRAM 
 	1. open terminal and run `sudo minicom` 
 		Response: `CCCCCCCCCCC`
 	2. load MLO(u-boot-spl.bin) using x-modem `(cntrl+a)+s`
