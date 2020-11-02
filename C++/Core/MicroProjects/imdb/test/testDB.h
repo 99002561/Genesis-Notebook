@@ -1,12 +1,11 @@
-#include "imdbDB.h"
-//#include <gtest/gtest.h>
+#include "../src/imdbDB.h"
 
 void dataBase_test(){
 
 IMDBdatabase db;
 
 db.importDataset("IMDBratings.csv");
-//db.addMovie("xyz","raj","Ind","2020","Horror","5.5","150");
+db.addMovie("xyz","raj","Ind","2020","Horror","5.5","150");
 
 /*
 db.addMovie("xyz","raj","Ind","2020","Horror","5.5","150");
