@@ -36,16 +36,17 @@ Linux Platform based C++ Development
     2. write alias names
     3. reopen the terminal 
         or source .bashrc
-    **Commands**
-    *  alias compileDir='g++ -c src/*.c* && mkdir -p obj && mv *.o obj'
-    * alias compile='g++ -c *.c* && mkdir -p obj && mv *.o obj'
-    * alias compileTest='g++ -c src/*.c* && g++ -c test/test.cpp && mkdir -p obj && mv *.o obj'
-    * alias link='mkdir -p bin && g++ obj/*.o -o bin/out'
-    * alias linkGtest='mkdir -p bin && g++ obj/*.o -lgtest -lgtest_main -lpthread -o bin/out'
-    * alias run='bin/out'
-    * alias genMake='cd build && cmake . && cd ..'
-    * alias build='cd build && make && ./out && cd ..'
-    * alias runB='build/out'
+
+## Alias Commands
+* `alias compileDir='g++ -c src/*.c* && mkdir -p obj && mv *.o obj'`
+* `alias compile='g++ -c *.c* && mkdir -p obj && mv *.o obj'`
+* `alias compileTest='g++ -c src/*.c* && g++ -c test/test.cpp && mkdir -p obj && mv *.o obj'`
+* `alias link='mkdir -p bin && g++ obj/*.o -o bin/out'`
+* `alias linkGtest='mkdir -p bin && g++ obj/*.o -lgtest -lgtest_main -lpthread -o bin/out'`
+* `alias run='bin/out'`
+* `alias genMake='cd build && cmake . && cd ..'`
+* `alias build='cd build && make && ./out && cd ..'`
+* `alias runB='build/out'`
 
 ### Tools Required
 0. IDE or Compiler with Editor(Vs code)
