@@ -6,11 +6,14 @@
     - Part2
 * Study of Core C++
 * C++ tools 
-    Google Test
-    c++ and pylint or cpp check
-    doxygen
-    code analysis
 * Dynamic and Static libraries
+
+## Env Checklist
+1. Code Analysis(c++ and pylint or cpp check)
+2. Unit Testing - Google Test
+3. doxygen
+2. Debugging and Symbol viewer
+3. Auto Complete
 
 
 ## Ocr 23
