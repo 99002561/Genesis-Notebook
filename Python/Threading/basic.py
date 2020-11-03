@@ -13,7 +13,6 @@ print("Main end")
 
 
 #'''
-
 def my_thread():
     for i in range(5):
         print("In my thread function:" ,i)

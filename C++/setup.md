@@ -4,7 +4,7 @@ Linux Platform based C++ Development
 ## Installation
 1. [Linux Development tools](../Linux/DevelopmentTools/setup.md)
 2. CI/CD
-    * [Git and Github Setup](../Github/Setup.md)
+    * [Git and Github Setup](../Github/setup.md)
     * [Git Actions](../Github/Actions.md)
 
 ### Tools Required

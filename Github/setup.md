@@ -12,7 +12,11 @@
 
 ## Reference Links
 * [Git Start Docs](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control#ch01-getting-started)
-* [Github Docs](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/overview)
+
+### VSCode
+* [Version Control](https://code.visualstudio.com/docs/editor/versioncontrol)
+* [Working with Github](https://code.visualstudio.com/docs/editor/github)
+* [vs code extension](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
 
 ### Markdown(.md)
 * [Sample .md file](markdown)
@@ -21,7 +25,3 @@
 * [Markdown Writing](https://docs.github.com/en/free-pro-team@latest/github/writing-on-github/basic-writing-and-formatting-syntax)
 
 
-### VSCode
-* [Version Control](https://code.visualstudio.com/docs/editor/versioncontrol)
-* [Working with Github](https://code.visualstudio.com/docs/editor/github)
-* [vs code extension](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)

@@ -22,23 +22,23 @@
     4. sudo make
     5. sudo cp *.a /usr/lib
 
+# vs code
+1. [vs code editor](https://code.visualstudio.com/Download)
+2. [c/c++ extension](https://code.visualstudio.com/docs/cpp/config-linux)
+    compile and debug a simple C++ program
+3. [cmake tool](https://code.visualstudio.com/docs/cpp/cmake-linux)
+    easy to configure, build, and debug your C++ project
+4. [C/C++ Advanced Lint](https://marketplace.visualstudio.com/items?itemName=jbenden.c-cpp-flylint)
+    static code analyzers for C and C++ code.
+4. [Tasks](https://code.visualstudio.com/docs/editor/tasks)
+
 # Alias Names
 1. launch terminal
 2. code ~/.bashrc
 3. write alias names
 4. reopen the terminal or source ~/.bashrc
 ## Commands
-    alias compileDir='g++ -c src/*.c* && mkdir -p obj && mv *.o obj'
-    alias compile='g++ -c *.c* && mkdir -p obj && mv *.o obj'
-    alias compileTest='g++ -c src/*.c* && g++ -c test/test.cpp && mkdir -p obj && mv *.o obj'
-    alias link='mkdir -p bin && g++ obj/*.o -o bin/out'
-    alias linkGtest='mkdir -p bin && g++ obj/*.o -lgtest -lgtest_main -lpthread -o bin/out'
-    alias run='bin/out'
-    alias genMake='cd build && cmake . && cd ..'
-    alias build='cd build && make && ./out && cd ..'
-    alias runB='build/out'
-
-# vs code
-1. [vs code editor](https://code.visualstudio.com/Download)
-2. [c/c++ extension](https://code.visualstudio.com/docs/cpp/config-linux)
-3. [Tasks](https://code.visualstudio.com/docs/editor/tasks)
+    alias buildDir='g++ src/*.c* -o out && ./out'
+    alias build='g++ *.c* -o out && ./out'
+    alias buildGtest='g++ src/*.c* test/test.cpp -lgtest -lgtest_main -lpthread -o out && ./out'
+    alias run='./out'
