@@ -9,11 +9,15 @@
 * Dynamic and Static libraries
 
 ## Env Checklist
+- [x] Debugging
+- [x] Auto Complete
+- [x] Symbol viewer
+
 1. Code Analysis(c++ and pylint or cpp check)
-2. Unit Testing - Google Test
+2. Unit Testing - Google Test adapter
 3. doxygen
-2. Debugging and Symbol viewer
-3. Auto Complete
+1. clang
+
 
 
 ## Ocr 23
