@@ -1,35 +1,18 @@
-## Work Setup
+# Work Setup
 Linux Platform based C++ Development
+
+## Installation
+1. [Linux Development tools](../Linux/DevelopmentTools/setup.md)
+2. CI/CD
+    * [Git and Github Setup](../Github/Setup.md)
+    * [Git Actions](../Github/Actions.md)
+
+
+
 1. Prerequisite Installations 
     1. [vs code editor](https://code.visualstudio.com/Download)
     2. c/c++ extension(Optional)
-    3. Update Linux Packages and Dependencies 
-        1. `sudo apt-get update`
-        2. `sudo apt-get dist-upgrade`
-    4. Build Essentials(C/C++ Compiler and Dev. Tool)
-        1. `sudo apt update`
-        2. `sudo apt install build-essential`
-    5. Debugger
-        * `sudo apt-get install gdb`
-    6. Cpp Check(Static Analysis)
-        * `sudo apt-get install cppcheck`
-    7. Valgrind(Dynamic Analysis)
-        * `sudo apt-get install valgrind`
-    8. CI/CD
-        * [Git and Github Setup](../Github/Setup.md)
-        * [Git Actions](../Github/Actions.md)
-    9. Unit Testing
-        * Cmake 
-            1. `sudo apt-get install cmake`
-            2. `sudo apt-get install build-essential cmake`
-        * Google Test
-            1. `sudo apt-get install libgtest-dev `
-            2. `cd /usr/src/gtest `
-            3. `sudo cmake CMakeLists.txt `
-            4. `sudo make `
-            5. `sudo cp *.a /usr/lib `
-            6. `sudo ln -s /usr/lib/libgtest.a /usr/local/lib/libgtest.a`
-            7. `sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/libgtest_main.a`
+
 
 2. Write Alias Names
     1. code ~/.bashrc

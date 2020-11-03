@@ -1,7 +1,7 @@
 # Outline
 
 ## Programming Techniques
-* Startup Configurations[click here](startup.md)
+* Prerequisite Installations[click here](setup.md)
 * GNU Tools, gcc/g++ options [click here](1_simple)
 * Multifile programming [click here](2_multi)
 * Static Libraries [click here](3_static-libs) 

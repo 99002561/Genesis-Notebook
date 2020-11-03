@@ -4,7 +4,7 @@ Genesis Program Notes
 * [Todo Tasks](Todo.md)
 
 ## C++ Programming
-* [Work Setup](C++/Setup.md)
+* [Work Setup](C++/setup.md)
 * [Core Concepts](C++/Core/coreConcepts.md)
 * [Core Essentials](C++/Core/README.md)
 * [Advanced Concepts](C++/Advanced/modernConcepts.md)
@@ -12,7 +12,7 @@ Genesis Program Notes
 * [Threads and IPC](C++/Advanced/Threads-and-IPC/README.md)
 
 ## Github
-* [Git workSetup](Github/Setup.md)
+* [Git workSetup](Github/setup.md)
 * [Sample Markdown file](markdown)
 * [Git Commands](Github/Commands.md)
 * [Git Actions](Github/Actions.md)

@@ -28,6 +28,9 @@
     $ cd /usr/src/gtest                                 # 2. Change Directory to Gtest 
     $ sudo cmake CMakeLists.txt                         # 3. Generate Make file
     $ sudo make                                         # 4. run make file
+
+6. `sudo ln -s /usr/lib/libgtest.a /usr/local/lib/libgtest.a`
+7. `sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/libgtest_main.a`
         
 ## OS UPdate to 20.04
     $ cat /etc/lsb-release                             # Verify Update
