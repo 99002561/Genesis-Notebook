@@ -1,12 +1,12 @@
 # Todo List
-* check for Copyright and confidential files
-* study of oct 27
 * Study of Advanced C++
     - Part1
     - Part2
 * Study of Core C++
-* C++ tools 
-* Dynamic and Static libraries
+* make c++ concepts Checklist
+* C++ tools
+* check for Copyright and confidential files
+* C++ project
 
 ## Env Checklist
 - [x] Debugging and building
@@ -17,8 +17,6 @@
 2. Unit Testing - Google Test adapter
 3. doxygen
 1. clang
-
-
 
 ## Ocr 23
 * Self Study/Additional:-
@@ -48,7 +46,6 @@
 Activity:-
 * File Handling, Namespaces (if pending)
 * Exception Handling, give a try
-
 
 ## Oct 21
 Activities:-
