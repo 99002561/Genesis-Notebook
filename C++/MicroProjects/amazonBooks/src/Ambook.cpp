@@ -1,7 +1,4 @@
 #include "Ambook.h"
-#include <iostream>
-#define print(msg) std::cout << msg << std::endl
-
 
 
 Ambook::Ambook(string name,string athr,string genre,string year,string rating,string price):
