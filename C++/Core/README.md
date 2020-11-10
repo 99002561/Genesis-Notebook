@@ -12,6 +12,8 @@
 * Inheritance [click here](inheritance)
 * Polymorphic Concepts [click here](virtual-functions)
 * Templates [click here](templates)
+* [Debug Tactics](coreNotes.md#Debug%20Tactics)
+* [Example of MakeFile](../../Linux/DevelopmentTools/5_make-tuto/Notes.md)
 
 ## Assignments
 

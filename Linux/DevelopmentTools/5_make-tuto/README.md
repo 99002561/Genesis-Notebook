@@ -1,7 +1,7 @@
 # Outline
 
 ## Makefiles
-* Significance of Makefiles for intelligent build[click here](intro.md)
+* Significance of Makefiles for intelligent build[click here](Notes.md)
 * Simple Makefile [click here](tuto1/README.md)
 * Using special variables [click here](tuto2)
 * Implicit rules [click here](tuto3)

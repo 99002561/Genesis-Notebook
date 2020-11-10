@@ -1,19 +1,11 @@
 # Todo List
-
 * C++ tools
 * check for Copyright and confidential files
 * C++ project
 
 ## Env Checklist
-- [x] Debugging and building
-- [x] Auto Complete(IntelliSense)
-- [x] Symbol viewer
-- [x] static code analyzer
-- [x] dynamic analysis
-2. Unit Testing - Google Test adapter
-3. doxygen
-1. clang
-
+- [ ] dynamic analysis
+- [ ] Unit Testing - Google Test adapter
 
 5. Medical Devices
 * Regulations and Design Control

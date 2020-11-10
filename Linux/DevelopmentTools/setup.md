@@ -42,3 +42,12 @@
     alias build='g++ *.c* -o out && ./out'
     alias buildGtest='g++ src/*.c* test/test.cpp -lgtest -lgtest_main -lpthread -o out && ./out'
     alias run='./out'
+
+    #C++ alias names for commands
+    alias buildGtest='g++ *.c* -lgtest -lgtest_main -lpthread -o out && ./out'
+    
+    #c++ make files 
+    alias buildMake='make out && ./out'
+    alias run='./out'
+    alias test='make Gtest && ./Gtest'
+    alias testDebug='make GtestDebug && ./GtestDebug'

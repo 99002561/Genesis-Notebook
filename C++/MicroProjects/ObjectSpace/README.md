@@ -1,16 +1,14 @@
 # Objects in 2D space
 
 ## Execution Commands
-1. make all 
-2. ./object-test.out ; ./objectdb-test.out
+1. make build
 
 ## Output Logs
-user@BLRMIESPC-1009:~/Desktop/99002623$ make all 
-g++ object-test.cpp wobject.cpp iobject.cpp -o object-test.out -lgtest -lgtest_main -lpthread
-g++ objectdb-test.cpp objectdb.cpp wobject.cpp iobject.cpp -o objectdb-test.out -lgtest -lgtest_main -lpthread
-
-user@BLRMIESPC-1009:~/Desktop/99002623$ ./object-test.out ; ./objectdb-test.out
-[==========] Running 4 tests from 1 test suite.
+user@BLRMIESPC-1009:~/Desktop/Notebook/C++/MicroProjects/ObjectSpace$ make build
+g++ *.c* -o bin.out -lgtest -lgtest_main -lpthread
+./bin.out
+Running main() from /build/googletest-j5yxiC/googletest-1.10.0/googletest/src/gtest_main.cc
+[==========] Running 10 tests from 2 test suites.
 [----------] Global test environment set-up.
 [----------] 4 tests from ObjectTest
 [ RUN      ] ObjectTest.DefaultConstructor
@@ -23,12 +21,6 @@ user@BLRMIESPC-1009:~/Desktop/99002623$ ./object-test.out ; ./objectdb-test.out
 [       OK ] ObjectTest.AnotherTest (0 ms)
 [----------] 4 tests from ObjectTest (0 ms total)
 
-[----------] Global test environment tear-down
-[==========] 4 tests from 1 test suite ran. (0 ms total)
-[  PASSED  ] 4 tests.
-
-[==========] Running 6 tests from 1 test suite.
-[----------] Global test environment set-up.
 [----------] 6 tests from ObjectDbTest
 [ RUN      ] ObjectDbTest.AddObjectTest
 [       OK ] ObjectDbTest.AddObjectTest (0 ms)
@@ -45,8 +37,8 @@ user@BLRMIESPC-1009:~/Desktop/99002623$ ./object-test.out ; ./objectdb-test.out
 [----------] 6 tests from ObjectDbTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 6 tests from 1 test suite ran. (0 ms total)
-[  PASSED  ] 6 tests.
+[==========] 10 tests from 2 test suites ran. (0 ms total)
+[  PASSED  ] 10 tests.
 
 ## Problem Statement
 * In this problem you are expected to implement a solution 

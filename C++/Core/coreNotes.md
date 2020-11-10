@@ -37,6 +37,19 @@
     * done by preprocessor directive
     * alias name for both values and types
 
+### Debug Tactics
+1. preprocessor macros for debug
+ * #define DEBUG or g++ file.cc -D DEBUG -o...
+2. cmake variation macro
+ * #define _cmake or g++ file.cc -D _CMAKE_ -o out -static libraries.
+
+ ```
+ #ifdef DEBUG
+ #define debug(msg) std::cout << msg << std::endl 
+ #else
+ #define debug(msg) " "
+ #endif
+ ```
 
 ### References
     * Alternate Name or alias name for variable 
@@ -86,3 +99,4 @@ Data members of a class may be declared as const . Such a data member must be in
 
 ## Reference Links
     https://www.geeksforgeeks.org/templates-cpp/
+

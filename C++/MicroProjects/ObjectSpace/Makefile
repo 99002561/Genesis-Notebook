@@ -1,7 +1,9 @@
-all: object-test.out objectdb-test.out
-object-test.out: object-test.cpp wobject.cpp iobject.cpp 
+all.out : iobject.cpp wobject.cpp objectdb.cpp object-test.cpp objectdb-test.cpp
 	g++ $^ -o $@ -lgtest -lgtest_main -lpthread
-objectdb-test.out: objectdb-test.cpp objectdb.cpp wobject.cpp iobject.cpp 
-	g++ $^ -o $@ -lgtest -lgtest_main -lpthread
-
-
+build: 
+	g++ *.c* -o bin.out -lgtest -lgtest_main -lpthread
+	./bin.out
+run:
+	./bin.out
+clean:
+	rm -rf *.out
