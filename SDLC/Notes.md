@@ -104,6 +104,30 @@ CI/CD
     * Low level to acceess that functional
 
 6. Design
+    SDLC Notes
+
+
+    High Level Design:
+
+        User Interface Requirements
+        shows Functionality Architecture
+        Dynamic View UML (Behavioral)
+
+            Dataflow chart 
+            Use Case Diagram
+            Activity
+
+    Low Level Design(Developer)
+    Logic of Individual Components
+    Static view UML(Structural)
+    Class Diagram
+    Component or Package Diagram
+
+    Design Diagrams 
+    1. use case diagram or sequence diagram
+    2. Activity or Flow Chart Diagram
+    3. Class or Object Diagram
+    4. Component or Package Diagram
     * UML Diagrams
         - Structural ()
         - Behaviaral (Componet level,sequence diagram)
