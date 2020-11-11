@@ -75,3 +75,6 @@
 * Simple usage of `find` command to locate a file in given path
 
 > [Click Here](README.md) to go back to main page
+
+## soft links
+sudo ln -s /home/training/Desktop/AmazonBooks/bookDataset.csv  /home/training/Desktop/AmazonBooks/build

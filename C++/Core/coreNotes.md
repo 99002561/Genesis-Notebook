@@ -97,6 +97,13 @@ Data members of a class may be declared as const . Such a data member must be in
     noboolalpha - for 1/0
     boolalpha - for true/false
 
+## Header Limiters
+
+* `#pragma once`
+
+* In the C and C++ programming languages, #pragma once is a non-standard but widely supported preprocessor directive designed to cause the current source file to be included only once in a single compilation.
+
+
 ## Reference Links
     https://www.geeksforgeeks.org/templates-cpp/
 

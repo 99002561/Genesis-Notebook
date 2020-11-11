@@ -12,6 +12,7 @@
 * File System Utils [link](./7_fs.md)
 * Notes[link](Notes.md)
 * [Man Command](Linux/Man.pdf)
+* [softlink](3_files.md#soft%20links)
 
 ## Shell Scripting
 * [learnshell.org](https://www.learnshell.org/)

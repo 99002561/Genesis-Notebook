@@ -20,7 +20,11 @@
     2. cd /usr/src/gtest
     3. sudo cmake CMakeLists.txt
     4. sudo make
+
+#### Commands only for Github actions 
     5. sudo cp *.a /usr/lib
+    6. sudo ln -s /usr/lib/libgtest.a /usr/local/lib/libgtest.a  
+    7. sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/libgtest_main.a
 
 # vs code
 1. [vs code editor](https://code.visualstudio.com/Download)
